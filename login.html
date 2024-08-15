@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>food order</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100%;
+                background-color: bisque;
+              
+             }
+             .login{
+                background-color: aqua;
+                width:100%;
+                background: transparent;
+                border-radius:20px;
+                border: 2px solid black;
+                padding: 20px;
+                text-align: center;
+                animation:animateBg 5s linear infinite;
+             }
+             .login #username{
+                padding: 10px;
+                border-radius: 20px;
+                width:92%;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+             }
+             #username:hover{
+                background-color:antiquewhite;
+             }
+             .login #next{
+                padding: 10px;
+                width:100%;
+                border-radius: 20px;
+             }
+             i{
+                font-size: 100px;
+             }
+             a{
+                text-decoration: none;
+                float: right;
+             }
+             label{
+                font-size: large;
+             }
+             .login:hover{
+                background-color:lightcyan;
+             }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <form name="myform" action="" onclick="">
+            <div class="login">
+                <i class='bx bxs-user-circle bx-fade-down' ></i>
+                <br><br>
+                <input type="text" id="username" name="username" placeholder="enter your email id" required>
+                <br><br>
+                <input type="password" id="username" name="username" placeholder="password" required>
+                <br><br>
+                <a href="#">forgot password</a>
+                <br><br>
+                <input type="submit" id="next" value="Login">
+                <br><br>
+                <label>To create new account ?</label><a href="signup.html">click here </a>
+            </div>
+        </form>
+    </body>
+</html>
