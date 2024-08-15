@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+ * {
+            box-sizing: border-box;
+        }
+
+        html {
+    scroll-behavior: smooth;
+}
+
+        body {
+            background-color: #0e1117;
+            color: #c9d1d9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #161b22;
+            padding: 20px 50px; /* Adjusted padding */
+            display: flex;
+            justify-content: space-between; /* Aligns items to the sides */
+            align-items: center; /* Vertically centers items */
+        }
+
+        nav {
+            display: flex; /* Use flexbox for nav links */
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            color: #8b949e;
+        }
+/* Content Styles */
+.content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.5em;
+    color: #8b949e;
+}
+
+.tags {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #f78166;
+}
+
+/* About Me Styles */
+.about-me {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #161b22;
+    color: #c9d1d9;
+    border-radius: 5px;
+}
+
+.about-me img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Education Styles */
+.education {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #161b22;
+    color: #c9d1d9;
+    border-radius: 5px;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 20px 30px;
+    
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline */
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    .right {
+        left: 0%;
+    }
+}
+
+/* Skills Styles */
+.skills {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #161b22;
+    color: #c9d1d9;
+    border-radius: 5px;
+}
+
+
+
+.skills {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .skills h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .skill-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    .skill i {
+        font-size: 3em;
+        margin-bottom: 10px;
+        color: #007bff;
+    }
+
+    .skill p {
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        .skill-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skill-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #161b22;
+    color: #ffffff;
+}
+/* Base styles */
+/* Base styles */
+.projects {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap; /* Allow projects to wrap */
+    justify-content: space-between; /* Space out the projects */
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+    width: 100%; /* Ensure the title takes full width */
+}
+
+.project {
+    background-color: #161b22;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px); /* Two projects per row with margin */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+.project h4 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.project p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.project button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.project button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .project {
+        width: calc(50% - 10px); /* Two projects per row */
+    }
+
+    .projects h2 {
+        font-size: 1.8em;
+    }
+
+    .project h4 {
+        font-size: 1.4em;
+    }
+
+    .project p {
+        font-size: 0.9em;
+    }
+
+    .project button {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects {
+        padding: 10px;
+    }
+
+    .projects h2 {
+        font-size: 1.5em;
+    }
+
+    .project {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .project h4 {
+        font-size: 1.2em;
+    }
+
+    .project p {
+        font-size: 0.85em;
+    }
+
+    .project button {
+        font-size: 0.85em;
+        padding: 8px;
+    }
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.dynamic-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: black; }
+}
+
+
+
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body >
+    <header>
+        <nav>
+            <a href="#home" style="color: #ffffff; margin: 0 15px;">Home</a>
+            <a href="#about" style="color: #ffffff; margin: 0 15px;">About Me</a>
+            <a href="#project" style="color: #ffffff; margin: 0 15px;">Projects</a>
+            <a href="#resume" style="color: #ffffff; margin: 0 15px;">Resume</a>
+        </nav>
+        </header>
+    
+    <div class="content">
+        <h1 id="dynamic-heading"></h1>
+        <p class="dynamic-text"></p>
+        
+    </div>
+
+    <div class="about-me reveal" id="about">
+        <img src="photo1.jpg" alt="Banka Venkateswarlu">
+        <div>
+            <h2>About Me</h2>
+            <p>I am a passionate web developer with a strong background in programming languages like Python and Java. I have a keen interest in building innovative web applications and exploring the field of cybersecurity. I love tackling challenges and continuously learning new technologies to enhance my skills.</p>
+            <p>In addition to my technical skills, I believe in the importance of teamwork and collaboration. I enjoy working in a dynamic environment where I can contribute to projects and learn from my peers. My goal is to create impactful solutions that address real-world problems while advancing my career in software development.</p>
+        </div>
+    </div>
+
+    <div class="education reveal">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="container left">
+                <div class="content">
+                    <h2>August 2022 - Present</h2>
+                    <p><strong>Vel Tech University, Chennai</strong></p>
+                    <p>Bachelor of Technology, CGPA: 8.3</p>
+                    <p>Department of Computer Science Engineering</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2>July 2019 - June 2022</h2>
+                    <p><strong>Government Polytechnic College, Vijayawada</strong></p>
+                    <p>Diploma, Electronics and Communication Engineering, Percentage: 83</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2>July 2018 - April 2019</h2>
+                    <p><strong>Holy Faith EM High School, Addanki</strong></p>
+                    <p>10th Class, Percentage: 98</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills reveal">
+        <h2>Skills</h2>
+        <div class="skill-container">
+            <div class="skill">
+                <i class='bx bxl-python'></i>
+                <p>Python</p>
+            </div>
+            <div class="skill">
+                <i class='bx bxl-java'></i>
+                <p>Java</p>
+            </div>
+            <div class="skill">
+                <i class="fa">C</i>
+                <p>C</p>
+            </div>
+            <div class="skill">
+                <i class='bx bxl-html5'></i>
+                <p>HTML5</p>
+            </div>
+            <div class="skill">
+                <i class='bx bxl-css3'></i>
+                <p>CSS</p>
+            </div>
+            <div class="skill">
+                <i class='bx bxl-javascript'></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill">
+                <i class='bx bx-data'></i>
+                <p>SQL</p>
+            </div>
+            <div class="skill">
+                <i class='bx bxl-php'></i>
+                <p>PHP</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects reveal" id="project">
+        <h2>PROJECTS</h2>
+        <div class="project">
+            <h4>TEXT TO SPEECH CONVERTER</h4>
+            <p>This project involves creating a Text to Speech (TTS) converter that transforms written text into spoken words, providing a natural and human-like auditory experience.</p>
+            <p><strong>Technologies Used:</strong> Python, TensorFlow, Natural Language Processing (NLP).</p>
+            <p><strong>Objectives:</strong> Improve the naturalness and intelligibility of synthesized speech.</p>
+            <p><strong>Impact:</strong> Applications in accessibility, virtual assistants, and automated customer service.</p>
+            <button onclick="window.location.href='https:/github.com/Venkyvtu/text-to-voice-converter'">View Project</button>
+        </div>
+        
+        <div class="project">
+            <h4>BANKING APPLICATION USING JAVA</h4>
+            <p>A comprehensive banking application designed for seamless user registration, account management, and transaction handling. This application ensures secure data management and a user-friendly interface.</p>
+            <p><strong>Technologies Used:</strong> Java, JSP, Servlets, MySQL.</p>
+            <p><strong>Objectives:</strong> Provide users with the ability to manage their accounts, view transaction history, and perform fund transfers with ease.</p>
+            <p><strong>Impact:</strong> Simplifies banking operations for users and promotes digital banking solutions.</p>
+            <button onclick="window.location.href='https:/github.com/Venkyvtu/banking_app'">View Project</button>
+        </div>
+        <div class="project">
+            <h4>EMPLOYEE WORK LOG</h4>
+            <p>This project focuses on developing an Employee Work Log system to track employees' work hours, tasks, and productivity. It ensures efficient time management and accurate record-keeping for businesses.</p>
+            <p><strong>Technologies Used:</strong> Java, JSP, Servlets, MySQL.</p>
+            <p><strong>Objectives:</strong> Improve employee time tracking, task management, and productivity analysis.</p>
+            <p><strong>Impact:</strong> Helps businesses manage their workforce more effectively and optimize operational efficiency.</p>
+            <button onclick="window.location.href='#'">View Project</button>
+        </div>
+        <div class="project">
+            <h4>MACHINE LEARNING FOR BONE FRACTURE DETECTION</h4>
+            <p>This project employs machine learning techniques, particularly Convolutional Neural Networks (CNN), to analyze medical images and detect bone fractures, providing a diagnostic tool for radiologists.</p>
+            <p><strong>Technologies Used:</strong> Python, Keras, TensorFlow, OpenCV.</p>
+            <p><strong>Objectives:</strong> Achieve high accuracy in fracture detection and reduce the time required for diagnosis.</p>
+            <p><strong>Impact:</strong> Aids in early detection of fractures, improving patient outcomes in healthcare.</p>
+            <button onclick="window.location.href='https:/github.com/Venkyvtu/ML-project-on-bone-facture'">View Project</button>
+        </div>
+        <div class="project">
+            <h4>OBJECT DETECTION USING OPENCV</h4>
+            <p>A real-time object detection system utilizing OpenCV to identify and track various objects in video feeds. The project implements advanced image processing techniques to achieve reliable detection.</p>
+            <p><strong>Technologies Used:</strong> Python, OpenCV.</p>
+            <p><strong>Objectives:</strong> Develop an efficient and responsive system for object tracking in dynamic environments.</p>
+            <p><strong>Impact:</strong> Can be used in various applications, including security, traffic monitoring, and augmented reality.</p>
+            <button onclick="window.location.href='https:/github.com/Venkyvtu/object-recognization'">View Project</button>
+        </div>
+        <div class="project">
+            <h4>FINANCIAL MANAGEMENT WEB APPLICATION</h4>
+            <p>A web application aimed at tracking personal expenses, managing budgets, and generating financial reports. This project integrates various financial management features to help users make informed decisions.</p>
+            <p><strong>Technologies Used:</strong> PHP, MySQL, HTML, CSS, JavaScript.</p>
+            <p><strong>Objectives:</strong> Provide users with tools to manage their finances effectively and analyze spending habits.</p>
+            <p><strong>Impact:</strong> Promotes financial literacy and helps users achieve their financial goals.</p>
+            <button onclick="window.location.href='https:/github.com/Venkyvtu/financial'">View Project</button>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2024 Banka Venkateswarlu. All rights reserved.</p>
+        <p>Contact: <a href="mailto:bankavenkateswarlu4@gmail.com" style="color: #f78166; text-decoration: none;">bankavenkateswarlu4@gmail.com</a> | 
+        Phone: <i class='bx bxs-phone-call'></i> 9346752894</p>
+        <p>
+            <a href="https://www.linkedin.com/in/venkateswarlu-banka-902835196?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&original_referer=" target="_top" style="color: #f78166; text-decoration: none; margin-right: 15px;">LinkedIn</a>
+            <a href="https://github.com/Venkyvtu" target="_top" style="color: #f78166; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
+
+    <script>
+        const heading = "Hello, I'M BANKA VENKATESWARLU!";
+        const headingElement = document.getElementById('dynamic-heading');
+        const delay = 100; // Delay in milliseconds
+
+        heading.split('').forEach((char, index) => {
+            setTimeout(() => {
+                const span = document.createElement('span');
+                span.className = 'fade-in'; // Add fade-in class
+                span.textContent = char;
+                headingElement.appendChild(span);
+            }, index * delay);
+        });
+        function revealOnScroll() {
+    var reveals = document.querySelectorAll('.reveal');
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
+        } else {
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+
+window.addEventListener('scroll', revealOnScroll);
+
+document.addEventListener('DOMContentLoaded', function() {
+    var text = "Web Developer | Python | Java";
+    var i = 0;
+    var speed = 200; // Speed in milliseconds
+
+    function typeWriter() {
+        if (i < text.length) {
+            document.querySelector('.dynamic-text').textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter();
+});
+
+
+    </script>
+    
+    
+</body>
+</html>
