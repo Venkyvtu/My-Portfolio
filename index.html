@@ -3,631 +3,1050 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Banka Venkateswarlu | Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
- * {
-            box-sizing: border-box;
+        :root {
+            --primary-color: #1f6feb;
+            --secondary-color: #f78166;
+            --dark-bg: #0e1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --text-light: #8b949e;
+            --accent-color: #58a6ff;
+            --timeline-color: #58a6ff;
         }
 
-        html {
-    scroll-behavior: smooth;
-}
-
-        body {
-            background-color: #0e1117;
-            color: #c9d1d9;
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
         header {
-            background-color: #161b22;
-            padding: 20px 50px; /* Adjusted padding */
-            display: flex;
-            justify-content: space-between; /* Aligns items to the sides */
-            align-items: center; /* Vertically centers items */
+            background-color: var(--card-bg);
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         nav {
-            display: flex; /* Use flexbox for nav links */
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
 
         nav a {
-            color: #ffffff;
+            color: var(--text-color);
             margin: 0 15px;
-            text-decoration: none; /* Remove underline from links */
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        nav a:hover {
+            color: var(--primary-color);
         }
 
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2em;
-            color: #8b949e;
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
         }
-/* Content Styles */
-.content {
-    text-align: center;
-    padding: 50px 20px;
-}
 
-.content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
+        nav a:hover::after {
+            width: 100%;
+        }
 
-.content p {
-    font-size: 1.5em;
-    color: #8b949e;
-}
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(135deg, #0a0c10 0%, #161b22 100%);
+            position: relative;
+            overflow: hidden;
+        }
 
-.tags {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #f78166;
-}
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMDgwODA4Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMxMTExMTEiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=');
+            opacity: 0.1;
+            z-index: 0;
+        }
 
-/* About Me Styles */
-.about-me {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    margin: 20px;
-    background-color: #161b22;
-    color: #c9d1d9;
-    border-radius: 5px;
-}
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
 
-.about-me img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #58a6ff, #f78166);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
 
-/* Education Styles */
-.education {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-    background-color: #161b22;
-    color: #c9d1d9;
-    border-radius: 5px;
-}
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
 
-/* Timeline Styles */
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
 
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
+        .tag {
+            background-color: rgba(31, 111, 235, 0.1);
+            color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(31, 111, 235, 0.3);
+            transition: all 0.3s ease;
+        }
 
-.container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
+        .tag:hover {
+            background-color: rgba(31, 111, 235, 0.2);
+            transform: translateY(-3px);
+        }
 
-.container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #FF9F55;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-light);
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
 
-.left {
-    left: 0;
-}
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
 
-.right {
-    left: 50%;
-}
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
 
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            position: relative;
+            color: var(--text-color);
+        }
 
-.right::after {
-    left: -16px;
-}
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
 
-.content {
-    padding: 20px 30px;
-    
-    position: relative;
-    border-radius: 6px;
-}
+        /* About Me Styles */
+        .about-me {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
 
-/* Media queries - Responsive timeline */
-@media screen and (max-width: 600px) {
-    .timeline::after {
-        left: 31px;
-    }
+        .about-me:hover {
+            transform: translateY(-5px);
+        }
 
-    .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
+        .about-me img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
 
-    .container::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
+        .about-content {
+            flex: 1;
+        }
 
-    .left::after,
-    .right::after {
-        left: 15px;
-    }
+        .about-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
 
-    .right {
-        left: 0%;
-    }
-}
+        .about-content p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
 
-/* Skills Styles */
-.skills {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-    background-color: #161b22;
-    color: #c9d1d9;
-    border-radius: 5px;
-}
+        /* Education Styles */
+        .education {
+            background-color: var(--dark-bg);
+        }
 
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
 
-.skills {
-        text-align: center;
-        margin: 0 auto;
-        width: 100%;
-        padding: 20px;
-    }
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
 
-    .skills h2 {
-        font-size: 2em;
-        margin-bottom: 20px;
-    }
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: var(--dark-bg);
+            border: 4px solid var(--timeline-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
 
-    .skill-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        width: 100%;
-    }
+        .left {
+            left: 0;
+        }
 
-    .skill {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 1.2em;
-    }
+        .right {
+            left: 50%;
+        }
 
-    .skill i {
-        font-size: 3em;
-        margin-bottom: 10px;
-        color: #007bff;
-    }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--card-bg);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--card-bg);
+        }
 
-    .skill p {
-        margin: 0;
-    }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--card-bg);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--card-bg) transparent transparent;
+        }
 
-    @media (max-width: 768px) {
+        .right::after {
+            left: -12px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--card-bg);
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            margin-bottom: 5px;
+            color: var(--text-light);
+        }
+
+        .timeline-content strong {
+            color: var(--text-color);
+        }
+
+        /* Skills Styles */
+        .skills {
+            background-color: var(--dark-bg);
+        }
+
         .skill-container {
-            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
-    }
 
-    @media (max-width: 480px) {
-        .skill-container {
-            grid-template-columns: repeat(1, 1fr);
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-    }
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #161b22;
-    color: #ffffff;
-}
-/* Base styles */
-/* Base styles */
-.projects {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap; /* Allow projects to wrap */
-    justify-content: space-between; /* Space out the projects */
-}
 
-.projects h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #333;
-    width: 100%; /* Ensure the title takes full width */
-}
+        .skill:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, var(--card-bg) 0%, #1f2937 100%);
+        }
 
-.project {
-    background-color: #161b22;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: calc(50% - 10px); /* Two projects per row with margin */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-}
+        .skill i {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
 
-.project h4 {
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #007bff;
-}
+        .skill p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-color);
+        }
 
-.project p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 10px;
-}
+        /* Projects Styles */
+        .projects {
+            background-color: var(--dark-bg);
+        }
 
-.project button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 10px;
-}
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-.project button:hover {
-    background-color: #0056b3;
-}
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .project {
-        width: calc(50% - 10px); /* Two projects per row */
-    }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
 
-    .projects h2 {
-        font-size: 1.8em;
-    }
+        .project-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
 
-    .project h4 {
-        font-size: 1.4em;
-    }
+        .project-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .project p {
-        font-size: 0.9em;
-    }
+        .project-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
 
-    .project button {
-        font-size: 0.9em;
-    }
-}
+        .project-content p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            flex: 1;
+        }
 
-@media (max-width: 480px) {
-    .projects {
-        padding: 10px;
-    }
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
-    .projects h2 {
-        font-size: 1.5em;
-    }
+        .tech-tag {
+            background-color: rgba(88, 166, 255, 0.1);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
 
-    .project {
-        width: 100%; /* Full width on mobile */
-    }
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
 
-    .project h4 {
-        font-size: 1.2em;
-    }
+        .project-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
+        }
 
-    .project p {
-        font-size: 0.85em;
-    }
+        .primary-btn {
+            background-color: var(--primary-color);
+            color: white;
+        }
 
-    .project button {
-        font-size: 0.85em;
-        padding: 8px;
-    }
-}
-.reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
-}
+        .primary-btn:hover {
+            background-color: #1a5fc8;
+        }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-.dynamic-text {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid;
-    width: 0;
-    animation: typing 3s steps(30, end) forwards, blink 0.5s step-end infinite alternate;
-}
+        .secondary-btn {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
+        .secondary-btn:hover {
+            background-color: rgba(31, 111, 235, 0.1);
+        }
 
-@keyframes blink {
-    from { border-color: transparent; }
-    to { border-color: black; }
-}
+        /* Contact Styles */
+        .contact {
+            text-align: center;
+            background-color: var(--card-bg);
+            padding: 80px 20px;
+        }
 
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
 
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
 
+        .contact-item:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            color: white;
+            background-color: var(--primary-color);
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--card-bg);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-in-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Dynamic Text Animation */
+        .dynamic-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid var(--primary-color);
+            width: 0;
+            animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+            margin: 0 auto;
+            max-width: max-content;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--primary-color); }
+        }
+
+        /* Character Animation */
+        .fade-in {
+            opacity: 0;
+            display: inline-block;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .about-me {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-me img {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .container::before {
+                left: 60px;
+                border: medium solid var(--card-bg);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--card-bg) transparent transparent;
+            }
+            
+            .left::after,
+            .right::after {
+                left: 15px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+            
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px 20px;
+            }
+            
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .skill-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .skill {
+                padding: 20px 10px;
+            }
+            
+            .skill i {
+                font-size: 2.5rem;
+            }
+        }
     </style>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body >
+<body>
     <header>
         <nav>
-            <a href="#home" style="color: #ffffff; margin: 0 15px;">Home</a>
-            <a href="#about" style="color: #ffffff; margin: 0 15px;">About Me</a>
-            <a href="#project" style="color: #ffffff; margin: 0 15px;">Projects</a>
-            <a href="#resume" style="color: #ffffff; margin: 0 15px;">Resume</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
-        </header>
+    </header>
     
-    <div class="content">
-        <h1 id="dynamic-heading"></h1>
-        <p class="dynamic-text"></p>
-        
-    </div>
-
-    <div class="about-me reveal" id="about">
-        <img src="photo1.jpg" alt="Banka Venkateswarlu">
-        <div>
-            <h2>About Me</h2>
-            <p>I am a passionate web developer with a strong background in programming languages like Python and Java. I have a keen interest in building innovative web applications and exploring the field of cybersecurity. I love tackling challenges and continuously learning new technologies to enhance my skills.</p>
-            <p>In addition to my technical skills, I believe in the importance of teamwork and collaboration. I enjoy working in a dynamic environment where I can contribute to projects and learn from my peers. My goal is to create impactful solutions that address real-world problems while advancing my career in software development.</p>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 id="dynamic-heading"></h1>
+            <p class="dynamic-text"></p>
+            
+            <div class="tags">
+                <span class="tag">Web Developer</span>
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">Machine Learning</span>
+            </div>
         </div>
-    </div>
-
-    <div class="education reveal">
-        <h2>Education</h2>
+        <a href="#about" class="scroll-down">
+            <i class='bx bx-chevron-down'></i>
+        </a>
+    </section>
+    
+    <section id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        
+        <div class="about-me reveal">
+            <img src="photo1.jpg" alt="Banka Venkateswarlu">
+            <div class="about-content">
+                <h3>Hello, I'm Venkateswarlu</h3>
+                <p>I am a passionate web developer with a strong background in programming languages like Python and Java. I have a keen interest in building innovative web applications and exploring the field of cybersecurity. I love tackling challenges and continuously learning new technologies to enhance my skills.</p>
+                <p>In addition to my technical skills, I believe in the importance of teamwork and collaboration. I enjoy working in a dynamic environment where I can contribute to projects and learn from my peers. My goal is to create impactful solutions that address real-world problems while advancing my career in software development.</p>
+                <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor activities.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="education" id="education">
+        <div class="section-title">
+            <h2>My Education</h2>
+        </div>
+        
         <div class="timeline">
-            <div class="container left">
-                <div class="content">
+            <div class="container left reveal">
+                <div class="timeline-content">
                     <h2>August 2022 - Present</h2>
                     <p><strong>Vel Tech University, Chennai</strong></p>
                     <p>Bachelor of Technology, CGPA: 8.3</p>
                     <p>Department of Computer Science Engineering</p>
                 </div>
             </div>
-            <div class="container right">
-                <div class="content">
+            <div class="container right reveal">
+                <div class="timeline-content">
                     <h2>July 2019 - June 2022</h2>
                     <p><strong>Government Polytechnic College, Vijayawada</strong></p>
                     <p>Diploma, Electronics and Communication Engineering, Percentage: 83</p>
                 </div>
             </div>
-            <div class="container left">
-                <div class="content">
+            <div class="container left reveal">
+                <div class="timeline-content">
                     <h2>July 2018 - April 2019</h2>
                     <p><strong>Holy Faith EM High School, Addanki</strong></p>
                     <p>10th Class, Percentage: 98</p>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="skills reveal">
-        <h2>Skills</h2>
+    </section>
+    
+    <section class="skills" id="skills">
+        <div class="section-title">
+            <h2>My Skills</h2>
+        </div>
+        
         <div class="skill-container">
-            <div class="skill">
+            <div class="skill reveal">
                 <i class='bx bxl-python'></i>
                 <p>Python</p>
             </div>
-            <div class="skill">
+            <div class="skill reveal">
                 <i class='bx bxl-java'></i>
                 <p>Java</p>
             </div>
-            <div class="skill">
-                <i class="fa">C</i>
+            <div class="skill reveal">
+                <i class="fab fa-cuttlefish"></i>
                 <p>C</p>
             </div>
-            <div class="skill">
+            <div class="skill reveal">
                 <i class='bx bxl-html5'></i>
                 <p>HTML5</p>
             </div>
-            <div class="skill">
+            <div class="skill reveal">
                 <i class='bx bxl-css3'></i>
                 <p>CSS</p>
             </div>
-            <div class="skill">
+            <div class="skill reveal">
                 <i class='bx bxl-javascript'></i>
                 <p>JavaScript</p>
             </div>
-            <div class="skill">
+            <div class="skill reveal">
                 <i class='bx bx-data'></i>
                 <p>SQL</p>
             </div>
-            <div class="skill">
+            <div class="skill reveal">
                 <i class='bx bxl-php'></i>
                 <p>PHP</p>
             </div>
+            <div class="skill reveal">
+                <i class='bx bxl-react'></i>
+                <p>React</p>
+            </div>
+            <div class="skill reveal">
+                <i class='bx bxl-nodejs'></i>
+                <p>Node.js</p>
+            </div>
+            <div class="skill reveal">
+                <i class='bx bxl-git'></i>
+                <p>Git</p>
+            </div>
+            <div class="skill reveal">
+                <i class='bx bxl-docker'></i>
+                <p>Docker</p>
+            </div>
         </div>
-    </div>
-
-    <div class="projects reveal" id="project">
-        <h2>PROJECTS</h2>
-        <div class="project">
-            <h4>TEXT TO SPEECH CONVERTER</h4>
-            <p>This project involves creating a Text to Speech (TTS) converter that transforms written text into spoken words, providing a natural and human-like auditory experience.</p>
-            <p><strong>Technologies Used:</strong> Python, TensorFlow, Natural Language Processing (NLP).</p>
-            <p><strong>Objectives:</strong> Improve the naturalness and intelligibility of synthesized speech.</p>
-            <p><strong>Impact:</strong> Applications in accessibility, virtual assistants, and automated customer service.</p>
-            <button onclick="window.location.href='https:/github.com/Venkyvtu/text-to-voice-converter'">View Project</button>
+    </section>
+    
+    <section class="projects" id="projects">
+        <div class="section-title">
+            <h2>My Projects</h2>
         </div>
         
-        <div class="project">
-            <h4>BANKING APPLICATION USING JAVA</h4>
-            <p>A comprehensive banking application designed for seamless user registration, account management, and transaction handling. This application ensures secure data management and a user-friendly interface.</p>
-            <p><strong>Technologies Used:</strong> Java, JSP, Servlets, MySQL.</p>
-            <p><strong>Objectives:</strong> Provide users with the ability to manage their accounts, view transaction history, and perform fund transfers with ease.</p>
-            <p><strong>Impact:</strong> Simplifies banking operations for users and promotes digital banking solutions.</p>
-            <button onclick="window.location.href='https:/github.com/Venkyvtu/banking_app'">View Project</button>
+        <div class="projects-container">
+            <div class="project-card reveal">
+                <div class="project-image" style="background-color: #1f6feb;"></div>
+                <div class="project-content">
+                    <h3>Text to Speech Converter</h3>
+                    <p>This project involves creating a Text to Speech (TTS) converter that transforms written text into spoken words, providing a natural and human-like auditory experience.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Venkyvtu/text-to-voice-converter" class="project-btn primary-btn" target="_blank">View Project</a>
+                        <a href="#" class="project-btn secondary-btn">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card reveal">
+                <div class="project-image" style="background-color: #f78166;"></div>
+                <div class="project-content">
+                    <h3>Banking Application</h3>
+                    <p>A comprehensive banking application designed for seamless user registration, account management, and transaction handling with secure data management.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JSP</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Venkyvtu/banking_app" class="project-btn primary-btn" target="_blank">View Project</a>
+                        <a href="#" class="project-btn secondary-btn">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card reveal">
+                <div class="project-image" style="background-color: #58a6ff;"></div>
+                <div class="project-content">
+                    <h3>Employee Work Log</h3>
+                    <p>System to track employees' work hours, tasks, and productivity ensuring efficient time management and accurate record-keeping for businesses.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JSP</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-btn primary-btn">View Project</a>
+                        <a href="#" class="project-btn secondary-btn">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card reveal">
+                <div class="project-image" style="background-color: #6f42c1;"></div>
+                <div class="project-content">
+                    <h3>Bone Fracture Detection</h3>
+                    <p>Machine learning system using CNN to analyze medical images and detect bone fractures, providing a diagnostic tool for radiologists.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">OpenCV</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Venkyvtu/ML-project-on-bone-facture" class="project-btn primary-btn" target="_blank">View Project</a>
+                        <a href="#" class="project-btn secondary-btn">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card reveal">
+                <div class="project-image" style="background-color: #e36209;"></div>
+                <div class="project-content">
+                    <h3>Object Detection</h3>
+                    <p>Real-time object detection system utilizing OpenCV to identify and track various objects in video feeds with advanced image processing.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Venkyvtu/object-recognization" class="project-btn primary-btn" target="_blank">View Project</a>
+                        <a href="#" class="project-btn secondary-btn">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card reveal">
+                <div class="project-image" style="background-color: #238636;"></div>
+                <div class="project-content">
+                    <h3>Financial Management</h3>
+                    <p>Web application for tracking personal expenses, managing budgets, and generating financial reports to help users make informed decisions.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Venkyvtu/financial" class="project-btn primary-btn" target="_blank">View Project</a>
+                        <a href="#" class="project-btn secondary-btn">Details</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project">
-            <h4>EMPLOYEE WORK LOG</h4>
-            <p>This project focuses on developing an Employee Work Log system to track employees' work hours, tasks, and productivity. It ensures efficient time management and accurate record-keeping for businesses.</p>
-            <p><strong>Technologies Used:</strong> Java, JSP, Servlets, MySQL.</p>
-            <p><strong>Objectives:</strong> Improve employee time tracking, task management, and productivity analysis.</p>
-            <p><strong>Impact:</strong> Helps businesses manage their workforce more effectively and optimize operational efficiency.</p>
-            <button onclick="window.location.href='#'">View Project</button>
-        </div>
-        <div class="project">
-            <h4>MACHINE LEARNING FOR BONE FRACTURE DETECTION</h4>
-            <p>This project employs machine learning techniques, particularly Convolutional Neural Networks (CNN), to analyze medical images and detect bone fractures, providing a diagnostic tool for radiologists.</p>
-            <p><strong>Technologies Used:</strong> Python, Keras, TensorFlow, OpenCV.</p>
-            <p><strong>Objectives:</strong> Achieve high accuracy in fracture detection and reduce the time required for diagnosis.</p>
-            <p><strong>Impact:</strong> Aids in early detection of fractures, improving patient outcomes in healthcare.</p>
-            <button onclick="window.location.href='https:/github.com/Venkyvtu/ML-project-on-bone-facture'">View Project</button>
-        </div>
-        <div class="project">
-            <h4>OBJECT DETECTION USING OPENCV</h4>
-            <p>A real-time object detection system utilizing OpenCV to identify and track various objects in video feeds. The project implements advanced image processing techniques to achieve reliable detection.</p>
-            <p><strong>Technologies Used:</strong> Python, OpenCV.</p>
-            <p><strong>Objectives:</strong> Develop an efficient and responsive system for object tracking in dynamic environments.</p>
-            <p><strong>Impact:</strong> Can be used in various applications, including security, traffic monitoring, and augmented reality.</p>
-            <button onclick="window.location.href='https:/github.com/Venkyvtu/object-recognization'">View Project</button>
-        </div>
-        <div class="project">
-            <h4>FINANCIAL MANAGEMENT WEB APPLICATION</h4>
-            <p>A web application aimed at tracking personal expenses, managing budgets, and generating financial reports. This project integrates various financial management features to help users make informed decisions.</p>
-            <p><strong>Technologies Used:</strong> PHP, MySQL, HTML, CSS, JavaScript.</p>
-            <p><strong>Objectives:</strong> Provide users with tools to manage their finances effectively and analyze spending habits.</p>
-            <p><strong>Impact:</strong> Promotes financial literacy and helps users achieve their financial goals.</p>
-            <button onclick="window.location.href='https:/github.com/Venkyvtu/financial'">View Project</button>
-        </div>
-    </div>
+    </section>
     
-
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+        </div>
+        
+        <div class="contact-info">
+            <a href="mailto:bankavenkateswarlu4@gmail.com" class="contact-item">
+                <i class='bx bx-envelope'></i>
+                <span>bankavenkateswarlu4@gmail.com</span>
+            </a>
+            <a href="tel:9346752894" class="contact-item">
+                <i class='bx bx-phone'></i>
+                <span>+91 9346752894</span>
+            </a>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/venkateswarlu-banka-902835196" class="social-link" target="_blank">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/Venkyvtu" class="social-link" target="_blank">
+                <i class='bx bxl-github'></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class='bx bxl-twitter'></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class='bx bxl-instagram'></i>
+            </a>
+        </div>
+    </section>
+    
     <footer>
         <p>&copy; 2024 Banka Venkateswarlu. All rights reserved.</p>
-        <p>Contact: <a href="mailto:bankavenkateswarlu4@gmail.com" style="color: #f78166; text-decoration: none;">bankavenkateswarlu4@gmail.com</a> | 
-        Phone: <i class='bx bxs-phone-call'></i> 9346752894</p>
-        <p>
-            <a href="https://www.linkedin.com/in/venkateswarlu-banka-902835196?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&original_referer=" target="_top" style="color: #f78166; text-decoration: none; margin-right: 15px;">LinkedIn</a>
-            <a href="https://github.com/Venkyvtu" target="_top" style="color: #f78166; text-decoration: none;">GitHub</a>
-        </p>
+        <p>Designed & Built with ❤️ by Venkateswarlu</p>
     </footer>
 
     <script>
+        // Dynamic heading animation
         const heading = "Hello, I'M BANKA VENKATESWARLU!";
         const headingElement = document.getElementById('dynamic-heading');
-        const delay = 100; // Delay in milliseconds
+        const delay = 100;
 
         heading.split('').forEach((char, index) => {
             setTimeout(() => {
                 const span = document.createElement('span');
-                span.className = 'fade-in'; // Add fade-in class
+                span.className = 'fade-in';
                 span.textContent = char;
                 headingElement.appendChild(span);
             }, index * delay);
         });
+
+        // Scroll reveal animation
         function revealOnScroll() {
-    var reveals = document.querySelectorAll('.reveal');
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+            const elementVisible = 150;
 
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add('active');
-        } else {
-            reveals[i].classList.remove('active');
+            reveals.forEach((element) => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
         }
-    }
-}
 
-window.addEventListener('scroll', revealOnScroll);
-
-document.addEventListener('DOMContentLoaded', function() {
-    var text = "Web Developer | Python | Java";
-    var i = 0;
-    var speed = 200; // Speed in milliseconds
-
-    function typeWriter() {
-        if (i < text.length) {
-            document.querySelector('.dynamic-text').textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
-
-    typeWriter();
-});
-
-
+        window.addEventListener('scroll', revealOnScroll);
+        
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            revealOnScroll();
+            
+            // Typewriter effect for subtitle
+            const text = "Web Developer | Python | Java | Machine Learning";
+            const dynamicText = document.querySelector('.dynamic-text');
+            let i = 0;
+            const speed = 100;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    dynamicText.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            
+            // Start typing after heading animation completes
+            setTimeout(typeWriter, heading.length * delay + 500);
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
     </script>
-    
-    
 </body>
 </html>
