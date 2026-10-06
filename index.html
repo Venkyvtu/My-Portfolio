@@ -1,709 +1,1414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Banka Venkateswarlu | Software Developer, AI/ML Engineer, Generative AI &amp; Agentic AI</title>
-<meta name="description" content="Portfolio of Banka Venkateswarlu, a software developer and AI/ML engineer building Generative AI and Agentic AI applications with Python, Java, LangGraph and cloud AI.">
-<meta name="theme-color" content="#000000">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banka Venkateswarlu — Software Developer &amp; AI/ML Engineer</title>
+<meta name="description" content="Portfolio of Banka Venkateswarlu — Software Developer and AI/ML Engineer building Generative AI, Agentic AI, and cloud-native applications with Python, Java and LangGraph.">
+<meta name="author" content="Banka Venkateswarlu">
+<meta name="theme-color" content="#0a0b0f">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Banka Venkateswarlu — Software Developer & AI/ML Engineer">
+<meta property="og:description" content="Software Developer and AI/ML Engineer building Generative AI, Agentic AI and cloud-native applications.">
 <meta property="og:image" content="photo1.jpg">
-<meta property="og:title" content="Banka Venkateswarlu | Software Developer &amp; AI/ML Engineer">
-<meta property="og:description" content="Generative AI, Agentic AI and software development. Featured project: Delta Autonomous Revenue Assurance Platform.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ctext x='16' y='24' font-size='22' font-family='sans-serif' font-weight='900' fill='%23fff' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Banka Venkateswarlu — Software Developer & AI/ML Engineer">
+<meta name="twitter:description" content="Software Developer and AI/ML Engineer building Generative AI, Agentic AI and cloud-native applications.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236a5cff'/%3E%3Ctext x='50' y='67' font-size='44' font-family='Arial,sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EBV%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-:root{--k:#000;--w:#f2f2f2;--g1:#111;--g2:#1a1a1a;--g3:#2b2b2b;--m:#8c8c8c;--f:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;--p:clamp(1.1rem,5vw,4rem)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--k);color:var(--w);font:400 1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:clip;min-height:100vh}
-body::after{content:"";position:fixed;inset:0;z-index:95;pointer-events:none;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-a{color:inherit}ul,ol{list-style:none}button{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--w);outline-offset:3px}
-.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.mono{font:400 .8rem/1.6 var(--mono);color:var(--m)}
-.cur,.cur *{cursor:none!important}
-.cd,.cr{position:fixed;top:0;left:0;z-index:200;pointer-events:none;border-radius:50%;mix-blend-mode:difference}
-.cd{width:6px;height:6px;margin:-3px 0 0 -3px;background:#fff}
-.cr{width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid #fff;transition:scale .25s,background .25s}
-.cr.h{scale:1.9}.cr.p{scale:3.2;background:#fff}
-
-.bar{position:fixed;top:0;left:0;right:0;z-index:110;display:flex;justify-content:space-between;align-items:center;padding:.8rem var(--p);mix-blend-mode:difference}
-.bar a,.bar button{font:900 1.5rem/1 var(--f);letter-spacing:.08em;color:#fff;background:none;border:0;text-decoration:none;padding:.6rem 0;cursor:pointer}
-.menu{position:fixed;inset:0;z-index:100;background:var(--k);display:flex;align-items:center;padding:0 var(--p);clip-path:inset(0 0 100% 0);visibility:hidden;transition:clip-path .7s cubic-bezier(.7,0,.2,1),visibility 0s .7s}
-.menu.open{clip-path:inset(0);visibility:visible;transition:clip-path .7s cubic-bezier(.7,0,.2,1)}
-.menu a{display:inline-block;font:900 min(13vw,12vh,8rem)/.98 var(--f);text-transform:uppercase;text-decoration:none;color:var(--m);transition:color .2s,transform .3s}
-.menu a:hover,.menu a:focus-visible{color:var(--w);transform:translateX(1.2rem)}
-
-.sec{padding:clamp(5rem,12vw,10rem) var(--p);position:relative}
-.big{font:900 clamp(3rem,11vw,9.5rem)/.86 var(--f);text-transform:uppercase;letter-spacing:-.01em;margin-bottom:2.5rem}
-.big.sm{font-size:clamp(2.2rem,7vw,6rem)}
-.sub{font-size:clamp(1.05rem,2vw,1.4rem);color:var(--m);max-width:44ch}
-.btn{display:inline-block;margin-top:1.5rem;padding:.8rem 1.6rem;border:1px solid var(--w);background:none;border-radius:99px;cursor:pointer;transition:background .25s,color .25s}
-.btn:hover{background:var(--w);color:var(--k)}
-.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
-.rv.in{opacity:1;transform:none}
-
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:6rem var(--p) 2.5rem;overflow:hidden;isolation:isolate}
-#net,#hv{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
-#hv{object-fit:cover;opacity:0;transition:opacity 1s;filter:grayscale(1) contrast(1.1)}
-#hv.on{opacity:.35}
-.nm{font:900 min(13.5vw,17rem)/.82 var(--f);text-transform:uppercase;letter-spacing:-.01em;animation:wipe 1.3s cubic-bezier(.7,0,.2,1) both}
-.nm span{display:block;will-change:transform}
-.roles{display:flex;flex-wrap:wrap;gap:.4rem 2rem;margin-top:2rem;font:600 .85rem/1.4 var(--mono);color:var(--m)}
-@keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
-
-.me{display:flex;flex-wrap:wrap;align-items:center;gap:3rem 6rem;justify-content:space-between}
-.me .big{margin:0}
-.cw{perspective:1200px;display:flex;flex-direction:column;align-items:center;gap:1rem;margin-inline:auto}
-.card{position:relative;width:min(320px,82vw);aspect-ratio:5/7;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.7,.2,1);cursor:pointer}
-.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:1.5rem;border:1px solid var(--g3);border-radius:18px;background:linear-gradient(160deg,var(--g2),var(--k));display:flex;flex-direction:column;gap:.6rem}
-.back{transform:rotateY(180deg);justify-content:center}
-.ph{width:100%;aspect-ratio:1;border:1px solid var(--g3);border-radius:10px;display:grid;place-items:center;overflow:hidden;font:900 4.5rem var(--f);color:var(--g3);background:var(--g1)}
-.ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
-.face h3{font:900 1.9rem/.95 var(--f);text-transform:uppercase}
-.lk{display:flex;gap:1.2rem;margin-top:auto;font:600 .85rem var(--mono)}
-.q{font:800 1.8rem/1 var(--f);text-transform:uppercase}
-.fl{display:grid;grid-template-columns:1fr 1fr;gap:.3rem;font:600 .85rem var(--mono)}
-.flipbtn{background:none;border:1px solid var(--g3);border-radius:99px;padding:.4rem 1rem;font-size:.8rem;cursor:pointer;color:var(--m)}
-.flipbtn:hover{color:var(--w);border-color:var(--w)}
-
-.about{min-height:100svh}
-.ab-l{font:900 clamp(2.6rem,10vw,8.5rem)/.95 var(--f);text-transform:uppercase;color:var(--w);opacity:.18;transition:opacity .6s,transform .6s;transform:translateX(-2rem)}
-.ab-l.on{opacity:1;transform:none}
-.ab-t{margin-top:4rem;max-width:56ch;color:var(--m);display:grid;gap:1rem}
-
-.hs{position:relative;height:300vh}
-.hs-in{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;gap:2rem;overflow:hidden;padding-top:4rem}
-.hs-h{padding:0 var(--p);margin:0;display:flex;flex-direction:column;gap:1rem}
-.hs-h small{font:400 .85rem/1.4 var(--mono);color:var(--m);text-transform:none;letter-spacing:0}
-.hs-track{display:flex;gap:1.2rem;width:max-content;padding:0 var(--p);will-change:transform}
-.hc{flex:0 0 min(78vw,380px);min-height:290px;border:1px solid var(--g3);border-radius:16px;padding:1.5rem;display:flex;flex-direction:column;gap:1rem;background:var(--g1);transition:background .3s,border-color .3s}
-.hc.wide{flex-basis:min(86vw,580px)}
-.hc:hover{background:var(--g2);border-color:var(--m)}
-.hc h3{font:900 2.2rem/.95 var(--f);text-transform:uppercase}
-.hc .mono{margin-top:auto}
-.hs.nat{height:auto;padding:4rem 0}
-.hs.nat .hs-in{position:static;height:auto;overflow:visible;padding-top:0}
-.hs.nat .hs-track{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem;-webkit-overflow-scrolling:touch}
-.hs.nat .hc{scroll-snap-align:start}
-
-.pt{display:grid;gap:2.5rem;margin-top:1rem}
-.grp h3{font:600 .85rem var(--mono);color:var(--m);margin-bottom:.8rem}
-.els{display:flex;flex-wrap:wrap;gap:.6rem}
-.elm{position:relative;width:92px;height:104px;border:1px solid var(--g3);background:var(--g1);padding:.4rem .5rem;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;transition:transform .25s,background .25s,color .25s,border-color .25s}
-.elm i{position:absolute;top:.35rem;left:.5rem;font:400 .65rem var(--mono);color:var(--m);font-style:normal}
-.elm b{font:900 2.4rem/1 var(--f)}
-.elm span{font-size:.68rem;line-height:1.15;overflow-wrap:anywhere}
-.elm:hover,.elm:focus-visible,.elm.on{transform:scale(1.14);z-index:2;background:var(--w);color:var(--k);border-color:var(--w)}
-.elm:hover i,.elm.on i{color:#555}
-.info{position:sticky;bottom:1rem;margin-top:2rem;padding:1rem 1.2rem;border:1px solid var(--g3);background:rgba(17,17,17,.94);border-radius:12px;display:grid;gap:.2rem;max-width:560px;font-size:.92rem;color:var(--m)}
-.info strong{color:var(--w);font:900 1.6rem/1 var(--f);text-transform:uppercase}
-
-.fe{border:1px solid var(--g3);border-radius:20px;padding:clamp(1.2rem,4vw,3.5rem);background:var(--g1);margin-bottom:3rem}
-.fe .big{margin:.8rem 0 1rem}
-.flow{display:flex;flex-direction:column;gap:0;margin:2rem 0;max-width:420px}
-.flow li{position:relative;padding-bottom:1.6rem}
-.flow li:last-child{padding-bottom:0}
-.flow li:not(:last-child)::after{content:"";position:absolute;left:1.4rem;top:3rem;bottom:.2rem;width:1px;background:var(--g3)}
-.flow li:not(:last-child)::before{content:"";position:absolute;left:1.4rem;top:3rem;width:5px;height:5px;margin-left:-2px;border-radius:50%;background:var(--w);animation:drip 3.6s linear infinite;animation-delay:var(--d)}
-@keyframes drip{0%{transform:translateY(0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateY(1.9rem);opacity:0}}
-.ag{width:100%;text-align:left;padding:.8rem 1rem;border:1px solid var(--g3);background:var(--k);border-radius:10px;font:800 1.15rem/1 var(--f);letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s}
-.ag:hover,.ag:focus-visible,.ag.on{background:var(--w);color:var(--k)}
-.agp{min-height:6.5rem;padding:1rem;border-left:2px solid var(--w);color:var(--m);font-size:.92rem;max-width:560px}
-.agp strong{display:block;color:var(--w);font:900 1.4rem var(--f);text-transform:uppercase}
-.agp ul{display:flex;flex-wrap:wrap;gap:.3rem .9rem;margin-top:.4rem}
-.agp li::before{content:"+ ";color:var(--w)}
-.tech{margin-top:1.5rem}
-.pl{border-top:1px solid var(--g3)}
-.pr{width:100%;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:clamp(1.1rem,3vw,2rem) 0;background:none;border:0;border-bottom:1px solid var(--g3);text-align:left;cursor:pointer;transition:padding .35s,color .3s;color:var(--m)}
-.pr b{font:900 clamp(1.7rem,5.5vw,4.5rem)/.95 var(--f);text-transform:uppercase}
-.pr span{font:400 .8rem var(--mono);text-align:right}
-.pr:hover,.pr:focus-visible{padding-left:1.2rem;color:var(--w)}
-
-.ppe-g{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:3rem;align-items:center}
-.ppe-g svg{width:100%;height:auto}
-.arc{stroke-dasharray:565.5;stroke-dashoffset:565.5;transition:stroke-dashoffset 1.8s cubic-bezier(.2,.7,.2,1)}
-.in .arc{stroke-dashoffset:76.9}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
-.chips li{border:1px solid var(--g3);border-radius:99px;padding:.3rem .9rem;font:600 .8rem var(--mono)}
-
-.edu li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem 2rem;align-items:center;padding:2rem 0;border-top:1px solid var(--g3)}
-.lv{font:900 clamp(3rem,12vw,10rem)/.85 var(--f);color:transparent;-webkit-text-stroke:1px var(--w)}
-.edu p{color:var(--m)}.edu b{color:var(--w);font-weight:600}
-
-.tm{max-width:760px;margin:auto;border:1px solid var(--g3);border-radius:12px;background:var(--g1);padding:1.2rem;font:400 .9rem/1.6 var(--mono);height:min(420px,70vh);overflow:auto}
-.tm .ln{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--m)}
-.tm .cm{color:var(--w)}
-#tf{display:flex;gap:.6rem}
-#ti{flex:1;min-width:0;background:none;border:0;color:var(--w);font:inherit;outline:0}
-#tf:focus-within label{color:var(--w)}
-
-.contact{min-height:90svh;display:flex;flex-direction:column;justify-content:center}
-.cl{display:flex;flex-wrap:wrap;gap:.8rem 2.5rem;font:800 clamp(1.5rem,4vw,2.6rem) var(--f);text-transform:uppercase}
-.cl a{text-decoration:none;border-bottom:2px solid var(--g3);transition:border-color .2s}
-.cl a:hover{border-color:var(--w)}
-.ft{padding:2rem var(--p);border-top:1px solid var(--g3)}
-
-dialog{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border:0;background:var(--k);color:var(--w);overflow:auto}
-dialog::backdrop{background:#000}
-.cs-in{max-width:1000px;margin:0 auto;padding:5rem var(--p) 4rem;position:relative}
-#cb{position:fixed;top:.8rem;right:var(--p);z-index:2;margin:0;background:var(--k)}
-.cs-s{padding:1.5rem 0;border-top:1px solid var(--g3);animation:up .6s cubic-bezier(.2,.7,.2,1) both}
-.cs-s h3{font:600 .85rem var(--mono);color:var(--m);margin-bottom:.7rem}
-.cs-s p,.cs-s li{max-width:62ch}
-.cs-s li{padding:.2rem 0}
-.cs-s ol li{font:800 1.4rem var(--f);text-transform:uppercase}
-@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-
-@media (max-width:800px){
-  .me{flex-direction:column;align-items:flex-start}
-  .ppe-g{grid-template-columns:1fr}
-  .ppe-g svg{max-width:260px}
-  .edu li{grid-template-columns:1fr}
-  .elm{width:calc(33.33% - .4rem);min-width:84px}
-  .pr{flex-direction:column;gap:.3rem}.pr span{text-align:left}
+/* ===================== Tokens ===================== */
+:root{
+  --bg:#0a0b0f;
+  --bg-soft:#0e1017;
+  --surface:#141722;
+  --surface-2:#191d2a;
+  --border:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.16);
+  --text:#eef0f5;
+  --text-muted:#9aa1b4;
+  --text-faint:#666e82;
+  --primary:#6a5cff;
+  --primary-soft:rgba(106,92,255,.12);
+  --accent:#ff8a5b;
+  --accent-soft:rgba(255,138,91,.12);
+  --cyan:#3fd0e8;
+  --ok:#39d98a;
+  --radius-s:8px;
+  --radius-m:14px;
+  --radius-l:22px;
+  --shadow:0 10px 30px -12px rgba(0,0,0,.5);
+  --maxw:1180px;
+  --nav-h:72px;
+  --ease:cubic-bezier(.22,.75,.2,1);
 }
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .rv{opacity:1;transform:none}.ab-l{opacity:1;transform:none}.arc{stroke-dashoffset:76.9}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
+h1,h2,h3,h4,.font-display{font-family:'Space Grotesk',sans-serif;letter-spacing:-.01em;}
+h1,h2,h3,h4{color:var(--text);font-weight:600;margin:0;}
+p{margin:0;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+ul{margin:0;padding:0;list-style:none;}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;}
+section{padding:120px 24px;max-width:var(--maxw);margin:0 auto;}
+.container-inner{max-width:var(--maxw);margin:0 auto;}
+
+::selection{background:var(--primary);color:#fff;}
+
+/* Focus visibility for accessibility */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+/* Skip link */
+.skip-link{
+  position:absolute;left:16px;top:-60px;
+  background:var(--accent);color:#1a1200;padding:10px 18px;border-radius:var(--radius-s);
+  font-weight:600;z-index:2000;transition:top .2s var(--ease);
+}
+.skip-link:focus{top:16px;}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+}
+
+/* Background circuit texture */
+body::before{
+  content:'';
+  position:fixed;inset:0;z-index:-2;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(106,92,255,.10), transparent 40%),
+    radial-gradient(circle at 85% 25%, rgba(255,138,91,.08), transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(63,208,232,.06), transparent 45%);
+}
+body::after{
+  content:'';
+  position:fixed;inset:0;z-index:-1;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:42px 42px;
+  mask-image:radial-gradient(ellipse 90% 60% at 50% 0%, black 40%, transparent 90%);
+}
+
+/* ===================== Header / Nav ===================== */
+header{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  height:var(--nav-h);
+  display:flex;align-items:center;
+  background:rgba(10,11,15,.7);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid var(--border);
+  transition:background .3s var(--ease);
+}
+.nav-wrap{
+  width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;
+  display:flex;align-items:center;gap:10px;
+}
+.brand-mark{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;font-weight:700;
+}
+nav.primary-nav{display:flex;align-items:center;gap:2px;}
+nav.primary-nav a{
+  position:relative;padding:9px 16px;font-size:.95rem;font-weight:500;color:var(--text-muted);
+  border-radius:999px;transition:color .25s var(--ease);
+}
+nav.primary-nav a:hover{color:var(--text);}
+nav.primary-nav a.is-active{color:var(--text);}
+nav.primary-nav a.is-active::after{
+  content:'';position:absolute;left:16px;right:16px;bottom:2px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+}
+.nav-actions{display:flex;align-items:center;gap:10px;}
+.icon-link{
+  width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:var(--text-muted);border:1px solid var(--border);transition:all .25s var(--ease);
+}
+.icon-link:hover{color:#fff;border-color:var(--border-strong);background:var(--surface-2);transform:translateY(-2px);}
+.nav-toggle{
+  display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--border);
+  align-items:center;justify-content:center;font-size:1.3rem;color:var(--text);
+}
+@media (max-width:860px){
+  nav.primary-nav{
+    position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;
+    background:var(--bg-soft);
+    flex-direction:column;align-items:stretch;gap:0;padding:18px;
+    transform:translateX(100%);transition:transform .35s var(--ease);
+    overflow-y:auto;
+  }
+  nav.primary-nav.is-open{transform:translateX(0);}
+  nav.primary-nav a{padding:16px 10px;font-size:1.1rem;border-bottom:1px solid var(--border);border-radius:0;}
+  nav.primary-nav a.is-active::after{display:none;}
+  nav.primary-nav a.is-active{color:var(--accent);}
+  .nav-toggle{display:flex;}
+}
+
+/* ===================== Buttons ===================== */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 24px;border-radius:999px;font-weight:600;font-size:.96rem;
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
+  border:1px solid transparent;white-space:nowrap;
+}
+.btn-primary{background:linear-gradient(135deg,var(--primary),#8b7dff);color:#fff;box-shadow:0 8px 24px -8px rgba(106,92,255,.6);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 30px -10px rgba(106,92,255,.7);}
+.btn-outline{border-color:var(--border-strong);color:var(--text);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px);}
+.btn-ghost{color:var(--text-muted);}
+.btn-ghost:hover{color:var(--text);}
+.btn-sm{padding:9px 16px;font-size:.85rem;}
+
+/* ===================== Hero ===================== */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding-top:calc(var(--nav-h) + 40px);
+  max-width:var(--maxw);margin:0 auto;padding-left:24px;padding-right:24px;
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;width:100%;}
+.eyebrow-row{display:flex;align-items:center;gap:10px;margin-bottom:22px;color:var(--text-muted);font-size:.92rem;}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(57,217,138,.15);}
+.hero h1{font-size:clamp(2.3rem,5vw,3.4rem);line-height:1.1;margin-bottom:18px;}
+.hero h1 .accent-text{background:linear-gradient(120deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.role-line{
+  font-family:'Space Grotesk',sans-serif;font-size:clamp(1.05rem,2vw,1.35rem);color:var(--text-muted);margin-bottom:22px;
+  min-height:1.6em;
+}
+.role-line .cursor{display:inline-block;width:2px;height:1em;background:var(--accent);margin-left:2px;vertical-align:-2px;animation:blink 1s step-end infinite;}
+@keyframes blink{50%{opacity:0;}}
+.hero-intro{color:var(--text-muted);font-size:1.05rem;max-width:56ch;margin-bottom:34px;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px;}
+.hero-socials{display:flex;gap:12px;}
+
+/* Hero agent-graph visual */
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;}
+.graph-card{
+  position:relative;width:100%;aspect-ratio:1/1;max-width:420px;
+  border:1px solid var(--border);border-radius:var(--radius-l);
+  background:linear-gradient(160deg,var(--surface),var(--bg-soft));
+  box-shadow:var(--shadow);overflow:hidden;
+}
+.graph-card svg{width:100%;height:100%;}
+.graph-node-label{
+  position:absolute;font-size:.68rem;font-family:'Space Grotesk',sans-serif;color:var(--text-muted);
+  background:rgba(10,11,15,.75);padding:3px 8px;border-radius:6px;border:1px solid var(--border);
+  transform:translate(-50%,-50%);pointer-events:none;white-space:nowrap;
+}
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;text-align:center;}
+  .eyebrow-row,.hero-ctas,.hero-socials{justify-content:center;}
+  .hero-intro{margin-left:auto;margin-right:auto;}
+  .hero-visual{order:-1;margin-bottom:10px;}
+  .graph-card{max-width:300px;}
+}
+
+/* ===================== Section headers ===================== */
+.section-head{margin-bottom:56px;max-width:640px;}
+.section-kicker{display:flex;align-items:center;gap:10px;color:var(--accent);font-weight:600;font-size:.85rem;margin-bottom:12px;}
+.section-kicker::before{content:'';width:22px;height:2px;background:var(--accent);border-radius:2px;}
+.section-head h2{font-size:clamp(1.7rem,3.4vw,2.3rem);margin-bottom:14px;}
+.section-head p{color:var(--text-muted);font-size:1.02rem;}
+.section-head.centered{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head.centered .section-kicker{justify-content:center;}
+.section-head.centered .section-kicker::before{display:none;}
+
+/* ===================== Reveal ===================== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+
+/* ===================== About ===================== */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start;}
+.about-photo-wrap{position:relative;}
+.about-photo{
+  width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius-l);
+  border:1px solid var(--border-strong);
+}
+.about-photo-glow{
+  position:absolute;inset:-14px;z-index:-1;border-radius:calc(var(--radius-l) + 14px);
+  background:linear-gradient(140deg,var(--primary-soft),var(--accent-soft));filter:blur(20px);
+}
+.about-text p{color:var(--text-muted);margin-bottom:16px;}
+.about-text p:last-of-type{margin-bottom:0;}
+.focus-box{
+  margin-top:30px;padding:24px;border-radius:var(--radius-m);
+  background:var(--surface);border:1px solid var(--border);
+}
+.focus-box h3{font-size:1rem;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.focus-box h3 i{color:var(--accent);}
+.focus-tags{display:flex;flex-wrap:wrap;gap:10px;}
+.focus-tag{
+  font-size:.85rem;padding:7px 14px;border-radius:999px;border:1px solid var(--border-strong);
+  color:var(--text-muted);transition:all .25s var(--ease);
+}
+.focus-tag:hover{color:var(--text);border-color:var(--primary);background:var(--primary-soft);}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr;}.about-photo-wrap{max-width:260px;margin:0 auto;}}
+
+/* ===================== Timeline (Experience + Education) ===================== */
+.timeline-list{display:flex;flex-direction:column;gap:0;position:relative;padding-left:36px;}
+.timeline-list::before{content:'';position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--primary),var(--accent));}
+.t-item{position:relative;padding-bottom:38px;}
+.t-item:last-child{padding-bottom:0;}
+.t-dot{
+  position:absolute;left:-36px;top:4px;width:20px;height:20px;border-radius:50%;
+  background:var(--bg);border:3px solid var(--primary);
+}
+.t-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-m);
+  padding:22px 26px;transition:border-color .25s var(--ease),transform .25s var(--ease);
+}
+.t-card:hover{border-color:var(--border-strong);transform:translateX(4px);}
+.t-card .t-org{color:var(--primary);font-weight:600;margin-bottom:4px;font-family:'Space Grotesk',sans-serif;}
+.t-card .t-date{color:var(--text-faint);font-size:.85rem;margin-bottom:10px;display:block;}
+.t-card p{color:var(--text-muted);font-size:.96rem;}
+.t-card .t-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.t-card .t-tags span{font-size:.75rem;padding:4px 10px;border-radius:6px;background:var(--surface-2);color:var(--text-muted);border:1px solid var(--border);}
+
+/* ===================== Skills ===================== */
+.skills-categories{display:flex;flex-direction:column;gap:34px;}
+.skill-cat-title{font-size:.85rem;font-weight:600;color:var(--text-faint);text-transform:none;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.skill-cat-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;}
+.skill-chip{
+  display:flex;align-items:center;gap:11px;padding:14px 16px;border-radius:var(--radius-s);
+  background:var(--surface);border:1px solid var(--border);border-left:3px solid transparent;
+  transition:all .25s var(--ease);
+}
+.skill-chip:hover{border-left-color:var(--accent);background:var(--surface-2);transform:translateY(-3px);}
+.skill-chip i{font-size:1.35rem;color:var(--primary);}
+.skill-chip span{font-size:.9rem;font-weight:500;}
+
+/* ===================== Flow / architecture diagrams (shared) ===================== */
+.flow-wrap{
+  border:1px solid var(--border);border-radius:var(--radius-l);background:var(--surface);
+  padding:44px 28px;overflow-x:auto;
+}
+.flow-track{display:flex;align-items:center;gap:0;min-width:max-content;justify-content:center;}
+.flow-node{
+  position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;width:150px;text-align:center;
+  cursor:default;
+}
+.flow-node .fn-icon{
+  width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+  background:var(--surface-2);border:1px solid var(--border-strong);font-size:1.5rem;color:var(--primary);
+  transition:all .3s var(--ease);
+}
+.flow-node:hover .fn-icon{border-color:var(--accent);color:var(--accent);transform:scale(1.08);box-shadow:0 0 0 6px var(--accent-soft);}
+.flow-node .fn-label{font-size:.82rem;font-weight:600;font-family:'Space Grotesk',sans-serif;}
+.flow-node .fn-tip{
+  position:absolute;top:calc(100% + 10px);left:50%;transform:translate(-50%,4px);width:190px;
+  background:var(--bg-soft);border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;
+  font-size:.78rem;color:var(--text-muted);opacity:0;pointer-events:none;transition:all .25s var(--ease);z-index:20;
+}
+.flow-node:hover .fn-tip,.flow-node:focus-within .fn-tip{opacity:1;transform:translate(-50%,0);}
+.flow-connector{flex:0 0 44px;height:2px;background:linear-gradient(90deg,var(--primary),var(--accent));position:relative;margin:0 -2px;}
+.flow-connector::after{
+  content:'';position:absolute;right:-1px;top:50%;transform:translateY(-50%);
+  border:5px solid transparent;border-left-color:var(--accent);
+}
+@media (max-width:700px){
+  .flow-track{flex-direction:column;}
+  .flow-connector{width:2px;height:34px;flex-basis:34px;background:linear-gradient(var(--primary),var(--accent));}
+  .flow-connector::after{right:50%;top:auto;bottom:-1px;transform:translateX(50%) rotate(90deg);}
+  .flow-node .fn-tip{position:static;transform:none;opacity:1;width:100%;margin-top:2px;display:none;}
+  .flow-node:hover .fn-tip,.flow-node:focus-within .fn-tip{display:block;}
+}
+
+/* Tech ecosystem strip */
+.eco-track{display:flex;align-items:stretch;gap:0;flex-wrap:wrap;justify-content:center;}
+.eco-node{
+  flex:1 1 140px;max-width:170px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-m);
+  padding:22px 14px;text-align:center;transition:all .3s var(--ease);
+}
+.eco-node:hover{transform:translateY(-6px);border-color:var(--primary);}
+.eco-node i{font-size:1.6rem;color:var(--cyan);margin-bottom:10px;display:block;}
+.eco-node span{font-size:.85rem;font-weight:600;}
+
+/* ===================== Stats ===================== */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.stat-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-m);
+  padding:30px 20px;text-align:center;
+}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;
+  background:linear-gradient(120deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.stat-label{color:var(--text-muted);font-size:.88rem;margin-top:6px;}
+@media (max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr);}}
+
+/* ===================== Projects ===================== */
+.filter-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;}
+.filter-btn{
+  padding:9px 18px;border-radius:999px;border:1px solid var(--border-strong);color:var(--text-muted);
+  font-size:.87rem;font-weight:500;transition:all .25s var(--ease);
+}
+.filter-btn:hover{color:var(--text);}
+.filter-btn.is-active{background:var(--primary);border-color:var(--primary);color:#fff;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;}
+.project-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-m);
+  display:flex;flex-direction:column;overflow:hidden;transition:all .3s var(--ease);
+}
+.project-card:hover{transform:translateY(-6px);border-color:var(--border-strong);box-shadow:var(--shadow);}
+.project-card.is-hidden{display:none;}
+.project-card.is-featured{grid-column:span 2;}
+@media (max-width:760px){.project-card.is-featured{grid-column:span 1;}}
+.pc-top{height:5px;background:linear-gradient(90deg,var(--primary),var(--accent));}
+.pc-body{padding:26px;display:flex;flex-direction:column;flex:1;}
+.pc-kicker{font-size:.72rem;font-weight:600;color:var(--accent);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.pc-body h3{font-size:1.25rem;margin-bottom:10px;}
+.pc-body p.pc-desc{color:var(--text-muted);font-size:.92rem;margin-bottom:16px;flex:1;}
+.pc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.pc-tags span{font-size:.74rem;padding:4px 10px;border-radius:6px;background:var(--surface-2);color:var(--text-muted);border:1px solid var(--border);}
+.pc-actions{display:flex;gap:10px;flex-wrap:wrap;}
+.pc-result{
+  margin-top:14px;padding:10px 14px;border-radius:8px;background:var(--accent-soft);color:var(--accent);
+  font-size:.8rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;
+}
+
+/* Delta feature block */
+.delta-feature{
+  border:1px solid var(--border-strong);border-radius:var(--radius-l);
+  background:linear-gradient(160deg,var(--surface),var(--bg-soft));
+  padding:40px;margin-bottom:48px;
+}
+.delta-feature-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;margin-bottom:28px;}
+.delta-feature-head h3{font-size:1.6rem;margin-bottom:8px;}
+.delta-feature-head p{color:var(--text-muted);max-width:60ch;}
+.delta-agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:8px;}
+.agent-card{
+  background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-s);padding:18px;
+  transition:all .25s var(--ease);
+}
+.agent-card:hover{border-color:var(--primary);transform:translateY(-3px);}
+.agent-card h4{font-size:.95rem;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.agent-card h4 i{color:var(--primary);}
+.agent-card ul{display:flex;flex-direction:column;gap:5px;}
+.agent-card li{font-size:.79rem;color:var(--text-muted);padding-left:14px;position:relative;}
+.agent-card li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--accent);}
+
+/* ===================== Contact ===================== */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;}
+.contact-info-list{display:flex;flex-direction:column;gap:16px;margin-top:28px;}
+.contact-info-item{
+  display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:var(--radius-s);
+  background:var(--surface);border:1px solid var(--border);transition:all .25s var(--ease);
+}
+.contact-info-item:hover{border-color:var(--primary);}
+.contact-info-item i{font-size:1.3rem;color:var(--primary);}
+.contact-info-item .ci-label{display:block;font-size:.75rem;color:var(--text-faint);}
+.contact-info-item .ci-value{font-weight:500;}
+.contact-form{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-m);padding:30px;}
+.form-row{margin-bottom:18px;}
+.form-row label{display:block;font-size:.85rem;margin-bottom:7px;color:var(--text-muted);}
+.form-row input,.form-row textarea{
+  width:100%;padding:12px 14px;border-radius:var(--radius-s);background:var(--bg-soft);
+  border:1px solid var(--border-strong);color:var(--text);font-family:inherit;font-size:.95rem;resize:vertical;
+}
+.form-row input:focus,.form-row textarea:focus{border-color:var(--primary);outline:none;}
+.form-status{margin-top:14px;font-size:.88rem;padding:12px 14px;border-radius:8px;display:none;}
+.form-status.is-visible{display:block;}
+.form-status.ok{background:rgba(57,217,138,.12);color:var(--ok);}
+.form-note{font-size:.78rem;color:var(--text-faint);margin-top:10px;}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+
+/* ===================== Footer ===================== */
+footer{border-top:1px solid var(--border);padding:34px 24px;text-align:center;color:var(--text-faint);font-size:.85rem;}
+footer .footer-heart{color:var(--accent);}
+
+/* ===================== Back to top ===================== */
+.back-to-top{
+  position:fixed;right:24px;bottom:24px;width:46px;height:46px;border-radius:50%;
+  background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;box-shadow:0 8px 20px -8px rgba(106,92,255,.7);opacity:0;pointer-events:none;
+  transform:translateY(10px);transition:all .3s var(--ease);z-index:900;
+}
+.back-to-top.is-visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+.back-to-top:hover{transform:translateY(-4px);}
+
+/* ===================== Modal ===================== */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(5,6,10,.75);backdrop-filter:blur(4px);
+  display:flex;align-items:flex-start;justify-content:center;padding:60px 20px;
+  z-index:2000;opacity:0;pointer-events:none;transition:opacity .25s var(--ease);overflow-y:auto;
+}
+.modal-overlay.is-open{opacity:1;pointer-events:auto;}
+.modal-box{
+  background:var(--surface);border:1px solid var(--border-strong);border-radius:var(--radius-l);
+  max-width:680px;width:100%;padding:36px;position:relative;
+  transform:translateY(20px);transition:transform .3s var(--ease);
+}
+.modal-overlay.is-open .modal-box{transform:translateY(0);}
+.modal-close{position:absolute;top:20px;right:20px;width:36px;height:36px;border-radius:50%;background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--text-muted);}
+.modal-close:hover{color:#fff;background:var(--accent);}
+.modal-box h3{font-size:1.5rem;margin-bottom:6px;padding-right:40px;}
+.modal-tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px;}
+.modal-tags span{font-size:.74rem;padding:4px 10px;border-radius:6px;background:var(--surface-2);color:var(--text-muted);border:1px solid var(--border);}
+.modal-section{margin-bottom:18px;}
+.modal-section h4{font-size:.82rem;color:var(--accent);margin-bottom:6px;}
+.modal-section p,.modal-section li{color:var(--text-muted);font-size:.93rem;}
+.modal-section ul{display:flex;flex-direction:column;gap:5px;margin-top:6px;}
+.modal-section li{padding-left:14px;position:relative;}
+.modal-section li::before{content:'';position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--primary);}
+.modal-actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+body.modal-lock{overflow:hidden;}
+
+/* ===================== Utility ===================== */
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
 </style>
 </head>
 <body>
-<header class="bar">
-  <a href="#home" aria-label="Banka, back to top">BANKA</a>
-  <button id="mb" type="button" aria-expanded="false" aria-controls="menu">MENU</button>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header>
+  <div class="nav-wrap">
+    <a href="#home" class="brand" aria-label="Banka Venkateswarlu — home">
+      <span class="brand-mark" aria-hidden="true">BV</span>
+      <span>Venkateswarlu</span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="icon-link" href="https://github.com/Venkyvtu" target="_blank" rel="noopener" aria-label="GitHub profile">
+        <i class='bx bxl-github' aria-hidden="true"></i>
+      </a>
+      <a class="icon-link" href="https://www.linkedin.com/in/venkateswarlu-banka-902835196" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <i class='bx bxl-linkedin' aria-hidden="true"></i>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <i class='bx bx-menu' aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
 </header>
-<nav id="menu" class="menu" aria-label="Main">
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
 
-<main>
-<section id="home" class="hero" aria-label="Introduction">
-  <canvas id="net" aria-hidden="true"></canvas>
-  <video id="hv" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
-  <h1 class="nm"><span class="l1">Banka</span><span class="l2">Venkateswarlu</span></h1>
-  <p class="roles"><span>Software Developer</span><span>AI / ML Engineer</span><span>Generative AI &amp; Agentic AI Developer</span></p>
-</section>
+<main id="main">
 
-<section id="me" class="sec me" aria-labelledby="meh">
-  <h2 id="meh" class="big rv">THIS<br>IS ME.</h2>
-  <div class="cw" id="cw">
-    <div class="card" id="card">
-      <div class="face front" id="ff">
-        <div class="ph" id="ph"><span>BV</span></div>
-        <h3>Banka Venkateswarlu</h3>
-        <p>Software Developer<br>AI / ML Engineer</p>
-        <p class="mono">Python • Java • AI • GenAI</p>
-        <p class="lk"><a href="https://github.com/Venkyvtu" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/venkateswarlu-banka-902835196" target="_blank" rel="noopener">LinkedIn</a></p>
+  <!-- ===================== Hero ===================== -->
+  <section class="hero" id="home" aria-label="Introduction">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow-row">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Open to software development &amp; AI/ML opportunities</span>
+        </div>
+        <h1>Hi, I'm Banka Venkateswarlu —<br><span class="accent-text">building software &amp; agentic AI systems</span></h1>
+        <p class="role-line"><span id="roleText"></span><span class="cursor" aria-hidden="true"></span></p>
+        <p class="hero-intro">I'm a software developer and AI/ML engineer with a foundation in Python and Java, now focused on Generative AI and Agentic AI — building multi-agent workflows with LangGraph, working with LLMs on AWS and Azure OpenAI, and applying machine learning to real problems.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary"><i class='bx bx-grid-alt' aria-hidden="true"></i> View projects</a>
+          <a href="resume.pdf" class="btn btn-outline" download><i class='bx bx-download' aria-hidden="true"></i> Download resume</a>
+          <a href="#contact" class="btn btn-ghost"><i class='bx bx-envelope' aria-hidden="true"></i> Contact me</a>
+        </div>
+        <div class="hero-socials">
+          <a class="icon-link" href="https://github.com/Venkyvtu" target="_blank" rel="noopener" aria-label="GitHub profile"><i class='bx bxl-github' aria-hidden="true"></i></a>
+          <a class="icon-link" href="https://www.linkedin.com/in/venkateswarlu-banka-902835196" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class='bx bxl-linkedin' aria-hidden="true"></i></a>
+          <a class="icon-link" href="mailto:bankavenkateswarlu4@gmail.com" aria-label="Send an email"><i class='bx bx-envelope' aria-hidden="true"></i></a>
+        </div>
       </div>
-      <div class="face back" id="fb" inert>
-        <p class="q">Building software, AI systems and intelligent applications.</p>
-        <p class="mono">Current focus</p>
-        <ul class="fl"><li>Generative AI</li><li>Agentic AI</li><li>LLMs</li><li>RAG</li><li>LangGraph</li><li>Cloud AI</li></ul>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="graph-card">
+          <svg viewBox="0 0 400 400" id="heroGraph">
+            <g stroke="url(#gradLine)" stroke-width="1.5" fill="none" opacity=".8">
+              <path d="M200 70 L90 160" />
+              <path d="M200 70 L310 160" />
+              <path d="M90 160 L200 250" />
+              <path d="M310 160 L200 250" />
+              <path d="M200 250 L130 330" />
+              <path d="M200 250 L270 330" />
+              <path d="M90 160 L310 160" />
+            </g>
+            <defs>
+              <linearGradient id="gradLine" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#6a5cff"/>
+                <stop offset="1" stop-color="#ff8a5b"/>
+              </linearGradient>
+            </defs>
+            <g id="pulseGroup">
+              <circle cx="200" cy="70" r="6" fill="#ff8a5b"/>
+              <circle cx="90" cy="160" r="16" fill="#141722" stroke="#6a5cff" stroke-width="2"/>
+              <circle cx="310" cy="160" r="16" fill="#141722" stroke="#6a5cff" stroke-width="2"/>
+              <circle cx="200" cy="250" r="18" fill="#141722" stroke="#ff8a5b" stroke-width="2"/>
+              <circle cx="130" cy="330" r="12" fill="#141722" stroke="#3fd0e8" stroke-width="2"/>
+              <circle cx="270" cy="330" r="12" fill="#141722" stroke="#3fd0e8" stroke-width="2"/>
+            </g>
+          </svg>
+          <span class="graph-node-label" style="top:17.5%;left:50%;">Query</span>
+          <span class="graph-node-label" style="top:40%;left:22.5%;">Agent A</span>
+          <span class="graph-node-label" style="top:40%;left:77.5%;">Agent B</span>
+          <span class="graph-node-label" style="top:62.5%;left:50%;">Orchestrator</span>
+          <span class="graph-node-label" style="top:82.5%;left:32.5%;">Tools</span>
+          <span class="graph-node-label" style="top:82.5%;left:67.5%;">Response</span>
+        </div>
       </div>
     </div>
-    <button class="flipbtn" id="flip" type="button" aria-pressed="false">Flip card</button>
-  </div>
-</section>
+  </section>
 
-<section id="about" class="sec about" aria-labelledby="abh">
-  <h2 id="abh" class="vh">About</h2>
-  <p class="ab-l">Software Developer.</p>
-  <p class="ab-l">AI/ML Enthusiast.</p>
-  <p class="ab-l">Generative AI Builder.</p>
-  <p class="ab-l">Problem Solver.</p>
-  <div class="ab-t rv">
-    <p>I started out as a software developer with a solid grounding in Python and Java, working through Computer Science fundamentals at Vel Tech University. Along the way machine learning pulled me in, first to solve specific problems like image classification, then as an interest of its own.</p>
-    <p>That interest has moved toward Generative AI and Agentic AI: systems where several LLM-driven agents coordinate to complete a task end to end. I enjoy the whole stack this needs: orchestration, cloud infrastructure, data handling and plain backend engineering.</p>
-  </div>
-</section>
-
-<section id="experience" class="hs" data-hs aria-labelledby="exh">
-  <div class="hs-in">
-    <h2 id="exh" class="big hs-h">EXPERIENCE<small>Tools and platforms I have worked with or learned</small></h2>
-    <div class="hs-track" tabindex="0" role="region" aria-label="Experience cards, scrollable">
-      <article class="hc wide"><h3>Tata Consultancy Services</h3><p>Worked hands-on with Generative AI and Agentic AI concepts, including LangGraph-based agent orchestration and LLM-powered application workflows on AWS and Azure OpenAI, with data in SQL Server and Neo4j. Gained exposure to AI observability using AWS X-Ray tracing and structured logging for guardrail checks on LLM outputs.</p><p class="mono">Generative AI · Agentic AI · LangGraph · Amazon Bedrock · Lambda · S3 · CloudTrail · EventBridge · X-Ray · Azure OpenAI</p></article>
-      <article class="hc"><h3>Agentic AI</h3><p>Delta Autonomous Revenue Assurance Platform, a multi-agent workflow.</p><p class="mono">Python · LangGraph · Groq · GPT-OSS-120B</p></article>
-      <article class="hc"><h3>Generative AI</h3><p>LLM applications and the techniques around them.</p><p class="mono">LLMs · RAG · Prompt Engineering · Guardrails</p></article>
-      <article class="hc"><h3>Cloud AI</h3><p>AWS services and Azure OpenAI.</p><p class="mono">Amazon Bedrock · AWS Lambda · Amazon S3 · CloudTrail · EventBridge · X-Ray · Azure OpenAI</p></article>
-      <article class="hc"><h3>AI Observability</h3><p>Monitoring and safety around AI systems.</p><p class="mono">AI Observability · Guardrails · X-Ray · CloudTrail</p></article>
-      <article class="hc"><h3>Data</h3><p>Relational, document and graph databases.</p><p class="mono">SQL Server · Neo4j · SQLite · MySQL · MongoDB</p></article>
-      <article class="hc"><h3>Software</h3><p>Application development across languages.</p><p class="mono">Python · Java · JavaScript · React · Node.js</p></article>
+  <!-- ===================== About ===================== -->
+  <section id="about" aria-labelledby="about-h">
+    <div class="section-head">
+      <span class="section-kicker">About</span>
+      <h2 id="about-h">A developer who moved toward AI &amp; agents</h2>
     </div>
-  </div>
-</section>
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo-glow" aria-hidden="true"></div>
+        <img src="photo1.jpg" alt="Portrait of Banka Venkateswarlu" class="about-photo">
+      </div>
+      <div class="about-text reveal">
+        <p>I started out as a software developer with a solid grounding in Python and Java, building backend logic and working through Computer Science fundamentals at Vel Tech University. Along the way I got pulled into machine learning — first as a way to solve specific problems like image classification, then as a broader interest of its own.</p>
+        <p>That interest has since moved toward Generative AI and Agentic AI: designing systems where multiple LLM-driven agents coordinate to complete a task end-to-end, rather than a single model answering a single prompt. I enjoy working across the stack this requires — orchestration logic, cloud infrastructure, data handling and the plain backend engineering that holds it all together.</p>
+        <p>I work well in collaborative environments, enjoy learning technologies as a project demands them, and I'm most motivated by problems where the solution isn't obvious at the start.</p>
 
-<section id="skills" class="sec" aria-labelledby="skh">
-  <h2 id="skh" class="big rv">SKILLS</h2>
-  <div id="pt" class="pt"></div>
-  <aside id="info" class="info" aria-live="polite">Hover, focus or tap an element.</aside>
-</section>
-
-<section id="projects" class="sec" aria-labelledby="prh">
-  <h2 id="prh" class="big rv">PROJECTS</h2>
-  <article class="fe rv" aria-labelledby="deh">
-    <p class="mono">Featured</p>
-    <h3 id="deh" class="big sm">DELTA<br>AUTONOMOUS REVENUE<br>ASSURANCE PLATFORM</h3>
-    <p class="sub">Agentic AI for Revenue Assurance</p>
-    <ol class="flow" id="flow"></ol>
-    <div id="ag" class="agp" aria-live="polite">Hover, focus or tap an agent.</div>
-    <p class="mono tech">Python · LangGraph · Groq · GPT-OSS-120B · Streamlit · Pandas · PyMuPDF · PaddleOCR · SQLite / SQL Server · Agentic AI</p>
-    <button class="btn" type="button" data-open="0">Open case study</button>
-  </article>
-  <ul class="pl" id="pl"></ul>
-</section>
-
-<section id="ppe" class="sec ppe" aria-labelledby="ph2">
-  <h2 id="ph2" class="big rv">PPE KIT<br>DETECTION<br>USING DEEP<br>LEARNING</h2>
-  <div class="ppe-g rv">
-    <svg viewBox="0 0 220 220" role="img" aria-label="YOLOv8m achieved approximately 0.864 mAP at 0.5">
-      <circle cx="110" cy="110" r="90" fill="none" stroke="#2b2b2b" stroke-width="10"/>
-      <circle class="arc" cx="110" cy="110" r="90" fill="none" stroke="#f2f2f2" stroke-width="10" transform="rotate(-90 110 110)"/>
-      <text x="110" y="116" text-anchor="middle" fill="#f2f2f2" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="54">0.864</text>
-      <text x="110" y="140" text-anchor="middle" fill="#8c8c8c" font-family="JetBrains Mono,monospace" font-size="10">mAP@0.5, approx.</text>
-    </svg>
-    <div>
-      <p class="sub">YOLOv8m achieved approximately mAP@0.5 = 0.864 in the documented project result.</p>
-      <ul class="chips"><li>YOLOv8n</li><li>YOLOv8s</li><li>YOLOv8m</li><li>Faster R-CNN</li><li>ResNet50</li><li>OpenCV</li><li>Computer Vision</li></ul>
-      <button class="btn" type="button" data-open="1">Open case study</button>
+        <div class="focus-box">
+          <h3><i class='bx bx-target-lock' aria-hidden="true"></i> Current focus</h3>
+          <div class="focus-tags">
+            <span class="focus-tag">Generative AI</span>
+            <span class="focus-tag">Agentic AI</span>
+            <span class="focus-tag">LLM Applications</span>
+            <span class="focus-tag">RAG</span>
+            <span class="focus-tag">LangGraph</span>
+            <span class="focus-tag">AWS</span>
+            <span class="focus-tag">Azure OpenAI</span>
+            <span class="focus-tag">AI Observability &amp; Guardrails</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hs" data-hs aria-labelledby="jh">
-  <div class="hs-in">
-    <h2 id="jh" class="big hs-h">BUILD. LEARN. SHIP.<small>My journey</small></h2>
-    <div class="hs-track" tabindex="0" role="region" aria-label="Journey cards, scrollable">
-      <article class="hc"><h3>Education</h3><p>Diploma in Electronics and Communication, then B.Tech in Computer Science Engineering.</p></article>
-      <article class="hc"><h3>Software Development</h3><p>Python, Java, C and JavaScript; web apps with React, Node.js, Express, JSP and Servlets.</p></article>
-      <article class="hc"><h3>Machine Learning</h3><p>Machine Learning and Deep Learning with TensorFlow and PyTorch.</p></article>
-      <article class="hc"><h3>Computer Vision</h3><p>OpenCV and YOLO, including PPE kit detection and object detection.</p></article>
-      <article class="hc"><h3>Generative AI</h3><p>LLMs, RAG, prompt engineering and guardrails.</p></article>
-      <article class="hc"><h3>Agentic AI</h3><p>LangGraph agents in the Delta platform.</p></article>
-      <article class="hc"><h3>Cloud</h3><p>AWS and Azure OpenAI services.</p></article>
-      <article class="hc"><h3>Current Projects</h3><p>Delta Autonomous Revenue Assurance Platform.</p></article>
+  <!-- ===================== Education ===================== -->
+  <section id="education" aria-labelledby="education-h">
+    <div class="section-head">
+      <span class="section-kicker">Background</span>
+      <h2 id="education-h">Education</h2>
     </div>
-  </div>
-</section>
+    <div class="timeline-list">
+      <div class="t-item reveal">
+        <span class="t-dot" aria-hidden="true"></span>
+        <div class="t-card">
+          <span class="t-org">Vel Tech University, Chennai</span>
+          <span class="t-date">August 2022 – Present</span>
+          <p>Bachelor of Technology, Computer Science Engineering · CGPA 8.3</p>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <span class="t-dot" aria-hidden="true"></span>
+        <div class="t-card">
+          <span class="t-org">Government Polytechnic College, Vijayawada</span>
+          <span class="t-date">July 2019 – June 2022</span>
+          <p>Diploma, Electronics and Communication Engineering · 83%</p>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <span class="t-dot" aria-hidden="true"></span>
+        <div class="t-card">
+          <span class="t-org">Holy Faith EM High School, Addanki</span>
+          <span class="t-date">July 2018 – April 2019</span>
+          <p>10th Class · 98%</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="education" class="sec" aria-labelledby="edh">
-  <h2 id="edh" class="vh">Education</h2>
-  <ol class="edu">
-    <li class="rv"><span class="lv">B.TECH</span><p>Computer Science Engineering<br><b>Vel Tech University, Chennai</b><br>August 2022 – Present · CGPA 8.3</p></li>
-    <li class="rv"><span class="lv">DIPLOMA</span><p>Electronics and Communication Engineering<br><b>Government Polytechnic College, Vijayawada</b><br>July 2019 – June 2022 · 83%</p></li>
-    <li class="rv"><span class="lv">10TH</span><p>10th Class<br><b>Holy Faith EM High School, Addanki</b><br>July 2018 – April 2019 · 98%</p></li>
-  </ol>
-</section>
+  <!-- ===================== Experience ===================== -->
+  <section id="experience" aria-labelledby="experience-h">
+    <div class="section-head">
+      <span class="section-kicker">Experience</span>
+      <h2 id="experience-h">Professional experience</h2>
+      <p>Technologies and platforms I've worked with in a professional/training setting.</p>
+    </div>
+    <div class="timeline-list">
+      <!-- EDIT: add your exact role title and employment dates here -->
+      <div class="t-item reveal">
+        <span class="t-dot" aria-hidden="true"></span>
+        <div class="t-card">
+          <span class="t-org">Tata Consultancy Services (TCS)</span>
+          <p>Worked hands-on with Generative AI and Agentic AI concepts, including LangGraph-based agent orchestration and LLM-powered application workflows. Built on cloud infrastructure spanning AWS — Amazon Bedrock, Lambda, S3, CloudTrail and EventBridge — and Azure OpenAI, with data stored in SQL Server and Neo4j. Also gained exposure to AI observability practices, using AWS X-Ray for tracing and structured logging for guardrail checks on LLM outputs.</p>
+          <div class="t-tags">
+            <span>Generative AI</span><span>Agentic AI</span><span>LangGraph</span><span>AWS</span>
+            <span>Amazon Bedrock</span><span>Azure OpenAI</span><span>Neo4j</span><span>SQL Server</span>
+            <span>AI Observability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="terminal" class="sec" aria-labelledby="tmh">
-  <h2 id="tmh" class="vh">Terminal</h2>
-  <div class="tm" id="tm">
-    <div id="out" aria-live="polite"></div>
-    <form id="tf" autocomplete="off"><label for="ti">$</label><input id="ti" type="text" autocapitalize="none" autocorrect="off" spellcheck="false" aria-label="Terminal command"></form>
-  </div>
-</section>
+  <!-- ===================== Skills ===================== -->
+  <section id="skills" aria-labelledby="skills-h">
+    <div class="section-head">
+      <span class="section-kicker">Capabilities</span>
+      <h2 id="skills-h">Skills</h2>
+      <p>Grouped by area rather than dumped into a single grid.</p>
+    </div>
 
-<section id="contact" class="sec contact" aria-labelledby="coh">
-  <h2 id="coh" class="big rv">LET'S BUILD<br>SOMETHING<br>INTELLIGENT.</h2>
-  <ul class="cl" id="cl">
-    <li><a href="https://github.com/Venkyvtu" target="_blank" rel="noopener">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/venkateswarlu-banka-902835196" target="_blank" rel="noopener">LinkedIn</a></li>
-  </ul>
-</section>
+    <div class="skills-categories">
+      <div>
+        <p class="skill-cat-title">Programming</p>
+        <div class="skill-grid">
+          <div class="skill-chip"><i class='bx bxl-python' aria-hidden="true"></i><span>Python</span></div>
+          <div class="skill-chip"><i class='bx bxl-java' aria-hidden="true"></i><span>Java</span></div>
+          <div class="skill-chip"><i class="fab fa-cuttlefish" aria-hidden="true"></i><span>C</span></div>
+          <div class="skill-chip"><i class='bx bxl-javascript' aria-hidden="true"></i><span>JavaScript</span></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="skill-cat-title">Web development</p>
+        <div class="skill-grid">
+          <div class="skill-chip"><i class='bx bxl-html5' aria-hidden="true"></i><span>HTML</span></div>
+          <div class="skill-chip"><i class='bx bxl-css3' aria-hidden="true"></i><span>CSS</span></div>
+          <div class="skill-chip"><i class='bx bxl-react' aria-hidden="true"></i><span>React</span></div>
+          <div class="skill-chip"><i class='bx bxl-nodejs' aria-hidden="true"></i><span>Node.js</span></div>
+          <div class="skill-chip"><i class='bx bx-server' aria-hidden="true"></i><span>Express</span></div>
+          <div class="skill-chip"><i class='bx bxl-java' aria-hidden="true"></i><span>JSP</span></div>
+          <div class="skill-chip"><i class='bx bx-code-block' aria-hidden="true"></i><span>Servlets</span></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="skill-cat-title">Databases</p>
+        <div class="skill-grid">
+          <div class="skill-chip"><i class='bx bx-data' aria-hidden="true"></i><span>MySQL</span></div>
+          <div class="skill-chip"><i class='bx bxl-mongodb' aria-hidden="true"></i><span>MongoDB</span></div>
+          <div class="skill-chip"><i class='bx bx-data' aria-hidden="true"></i><span>SQLite</span></div>
+          <div class="skill-chip"><i class='bx bxs-server' aria-hidden="true"></i><span>SQL Server</span></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="skill-cat-title">AI / ML</p>
+        <div class="skill-grid">
+          <div class="skill-chip"><i class='bx bx-brain' aria-hidden="true"></i><span>Machine Learning</span></div>
+          <div class="skill-chip"><i class='bx bx-brain' aria-hidden="true"></i><span>Deep Learning</span></div>
+          <div class="skill-chip"><i class='bx bx-scan' aria-hidden="true"></i><span>Computer Vision</span></div>
+          <div class="skill-chip"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i><span>TensorFlow</span></div>
+          <div class="skill-chip"><i class="fa-solid fa-fire" aria-hidden="true"></i><span>PyTorch</span></div>
+          <div class="skill-chip"><i class='bx bx-camera' aria-hidden="true"></i><span>OpenCV</span></div>
+          <div class="skill-chip"><i class='bx bx-selection' aria-hidden="true"></i><span>YOLO</span></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="skill-cat-title">Generative &amp; agentic AI</p>
+        <div class="skill-grid">
+          <div class="skill-chip"><i class='bx bx-chip' aria-hidden="true"></i><span>LLMs</span></div>
+          <div class="skill-chip"><i class='bx bx-magic-wand' aria-hidden="true"></i><span>Generative AI</span></div>
+          <div class="skill-chip"><i class='bx bx-bot' aria-hidden="true"></i><span>Agentic AI</span></div>
+          <div class="skill-chip"><i class='bx bx-sitemap' aria-hidden="true"></i><span>LangGraph</span></div>
+          <div class="skill-chip"><i class='bx bx-search-alt' aria-hidden="true"></i><span>RAG</span></div>
+          <div class="skill-chip"><i class='bx bx-bot' aria-hidden="true"></i><span>AI Agents</span></div>
+          <div class="skill-chip"><i class='bx bx-shield-quarter' aria-hidden="true"></i><span>Guardrails</span></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="skill-cat-title">Cloud &amp; DevOps</p>
+        <div class="skill-grid">
+          <div class="skill-chip"><i class="fa-brands fa-aws" aria-hidden="true"></i><span>AWS</span></div>
+          <div class="skill-chip"><i class='bx bx-cube' aria-hidden="true"></i><span>Amazon Bedrock</span></div>
+          <div class="skill-chip"><i class='bx bx-flash' aria-hidden="true"></i><span>Lambda</span></div>
+          <div class="skill-chip"><i class='bx bx-box' aria-hidden="true"></i><span>S3</span></div>
+          <div class="skill-chip"><i class='bx bx-history' aria-hidden="true"></i><span>CloudTrail</span></div>
+          <div class="skill-chip"><i class='bx bx-git-branch' aria-hidden="true"></i><span>EventBridge</span></div>
+          <div class="skill-chip"><i class='bx bx-search-alt-2' aria-hidden="true"></i><span>X-Ray</span></div>
+          <div class="skill-chip"><i class="fa-brands fa-microsoft" aria-hidden="true"></i><span>Azure OpenAI</span></div>
+          <div class="skill-chip"><i class='bx bxl-docker' aria-hidden="true"></i><span>Docker</span></div>
+          <div class="skill-chip"><i class='bx bxl-git' aria-hidden="true"></i><span>Git</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AI & Agentic AI ===================== -->
+  <section id="ai-agentic" aria-labelledby="ai-agentic-h">
+    <div class="section-head">
+      <span class="section-kicker">AI &amp; Agentic AI</span>
+      <h2 id="ai-agentic-h">How I think about agentic systems</h2>
+      <p>A conceptual view of the request path through an LLM-based agent — hover or focus a node for a short explanation. This reflects concepts I've studied and applied at prototype scale, not a specific production system.</p>
+    </div>
+
+    <div class="flow-wrap">
+      <div class="flow-track">
+        <div class="flow-node" tabindex="0">
+          <span class="fn-icon"><i class='bx bx-user' aria-hidden="true"></i></span>
+          <span class="fn-label">User query</span>
+          <span class="fn-tip">The request or task, expressed in natural language.</span>
+        </div>
+        <span class="flow-connector" aria-hidden="true"></span>
+        <div class="flow-node" tabindex="0">
+          <span class="fn-icon"><i class='bx bx-bot' aria-hidden="true"></i></span>
+          <span class="fn-label">LLM / Agent</span>
+          <span class="fn-tip">An LLM reasons over the query and decides what's needed next — answer directly, or call a tool.</span>
+        </div>
+        <span class="flow-connector" aria-hidden="true"></span>
+        <div class="flow-node" tabindex="0">
+          <span class="fn-icon"><i class='bx bx-wrench' aria-hidden="true"></i></span>
+          <span class="fn-label">Tools</span>
+          <span class="fn-tip">Functions, APIs or agent nodes (e.g. LangGraph steps) that the agent can invoke.</span>
+        </div>
+        <span class="flow-connector" aria-hidden="true"></span>
+        <div class="flow-node" tabindex="0">
+          <span class="fn-icon"><i class='bx bx-data' aria-hidden="true"></i></span>
+          <span class="fn-label">Knowledge / data</span>
+          <span class="fn-tip">Retrieved context — documents, database records or a vector store (RAG).</span>
+        </div>
+        <span class="flow-connector" aria-hidden="true"></span>
+        <div class="flow-node" tabindex="0">
+          <span class="fn-icon"><i class='bx bx-message-check' aria-hidden="true"></i></span>
+          <span class="fn-label">Response</span>
+          <span class="fn-tip">The final answer, ideally checked against guardrails before it reaches the user.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="focus-tags" style="margin-top:28px;justify-content:center;">
+      <span class="focus-tag">LLM Applications</span>
+      <span class="focus-tag">Multi-agent Workflows</span>
+      <span class="focus-tag">Prompt Engineering</span>
+      <span class="focus-tag">AI Inference</span>
+      <span class="focus-tag">AI Observability</span>
+      <span class="focus-tag">Cloud AI Services</span>
+    </div>
+  </section>
+
+  <!-- ===================== Tech ecosystem ===================== -->
+  <section id="tech-ecosystem" aria-labelledby="tech-eco-h">
+    <div class="section-head centered">
+      <span class="section-kicker">Stack</span>
+      <h2 id="tech-eco-h">How the pieces connect</h2>
+      <p>The layers I typically work across, from interface to cloud.</p>
+    </div>
+    <div class="flow-wrap">
+      <div class="eco-track">
+        <div class="eco-node"><i class='bx bx-window-alt' aria-hidden="true"></i><span>Frontend</span></div>
+        <div class="eco-node"><i class='bx bx-server' aria-hidden="true"></i><span>Backend</span></div>
+        <div class="eco-node"><i class='bx bx-data' aria-hidden="true"></i><span>Database</span></div>
+        <div class="eco-node"><i class='bx bx-brain' aria-hidden="true"></i><span>AI / ML</span></div>
+        <div class="eco-node"><i class='bx bx-bot' aria-hidden="true"></i><span>GenAI</span></div>
+        <div class="eco-node"><i class='bx bx-cloud' aria-hidden="true"></i><span>Cloud</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Stats ===================== -->
+  <section aria-label="Portfolio statistics">
+    <div class="stats-grid">
+      <div class="stat-card reveal"><div class="stat-num" data-count="8">0</div><div class="stat-label">Projects built</div></div>
+      <div class="stat-card reveal"><div class="stat-num" data-count="39">0</div><div class="stat-label">Technologies used</div></div>
+      <div class="stat-card reveal"><div class="stat-num" data-count="5">0</div><div class="stat-label">AI / ML projects</div></div>
+      <div class="stat-card reveal"><div class="stat-num" data-count="1">0</div><div class="stat-label">Agentic AI project</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== Projects ===================== -->
+  <section id="projects" aria-labelledby="projects-h">
+    <div class="section-head">
+      <span class="section-kicker">Work</span>
+      <h2 id="projects-h">Projects</h2>
+      <p>Filter by area, or open a project for the full breakdown.</p>
+    </div>
+
+    <div class="filter-row" role="group" aria-label="Filter projects by category">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+      <button class="filter-btn" data-filter="genai">Generative AI</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+      <button class="filter-btn" data-filter="java">Java</button>
+      <button class="filter-btn" data-filter="python">Python</button>
+      <button class="filter-btn" data-filter="cloud">Cloud</button>
+    </div>
+
+    <!-- Delta feature project -->
+    <div class="delta-feature reveal" data-category="genai ai-ml python cloud">
+      <div class="delta-feature-head">
+        <div>
+          <span class="pc-kicker"><i class='bx bx-star' aria-hidden="true"></i> Featured · Agentic AI</span>
+          <h3>Delta — Autonomous Revenue Assurance Platform</h3>
+          <p>An AI-powered prototype built around the Order-to-Cash process: a chain of LangGraph-orchestrated agents that take remittance data through matching, dispute handling, refund analysis and leakage detection.</p>
+        </div>
+        <div class="pc-actions">
+          <button class="btn btn-outline btn-sm" data-modal-open="delta"><i class='bx bx-detail' aria-hidden="true"></i> View details</button>
+        </div>
+      </div>
+
+      <div class="flow-wrap" style="padding:32px 20px;">
+        <div class="flow-track">
+          <div class="flow-node" tabindex="0"><span class="fn-icon"><i class='bx bx-window-alt' aria-hidden="true"></i></span><span class="fn-label">Streamlit UI</span><span class="fn-tip">User-facing interface for uploading remittance files and reviewing results.</span></div>
+          <span class="flow-connector" aria-hidden="true"></span>
+          <div class="flow-node" tabindex="0"><span class="fn-icon"><i class='bx bx-sitemap' aria-hidden="true"></i></span><span class="fn-label">LangGraph orchestrator</span><span class="fn-tip">Coordinates the agent chain and manages state between steps.</span></div>
+          <span class="flow-connector" aria-hidden="true"></span>
+          <div class="flow-node" tabindex="0"><span class="fn-icon"><i class='bx bx-file' aria-hidden="true"></i></span><span class="fn-label">Remittance agent</span><span class="fn-tip">Extracts invoice numbers, ticket numbers, amounts and deductions from PDF/TXT remittance advice using LLM-based extraction with fallback parsing.</span></div>
+          <span class="flow-connector" aria-hidden="true"></span>
+          <div class="flow-node" tabindex="0"><span class="fn-icon"><i class='bx bx-check-double' aria-hidden="true"></i></span><span class="fn-label">Cash application agent</span><span class="fn-tip">Matches extracted payments against invoice data with deterministic, pandas-based matching logic.</span></div>
+          <span class="flow-connector" aria-hidden="true"></span>
+          <div class="flow-node" tabindex="0"><span class="fn-icon"><i class='bx bx-message-square-error' aria-hidden="true"></i></span><span class="fn-label">Dispute resolution agent</span><span class="fn-tip">Handles unmatched or contested items in the reconciliation flow.</span></div>
+          <span class="flow-connector" aria-hidden="true"></span>
+          <div class="flow-node" tabindex="0"><span class="fn-icon"><i class='bx bx-undo' aria-hidden="true"></i></span><span class="fn-label">Refund analysis agent</span><span class="fn-tip">Analyzes cases that may require a refund.</span></div>
+          <span class="flow-connector" aria-hidden="true"></span>
+          <div class="flow-node" tabindex="0"><span class="fn-icon"><i class='bx bx-trending-down' aria-hidden="true"></i></span><span class="fn-label">Revenue leakage agent</span><span class="fn-tip">Surfaces patterns that point to revenue leakage across the pipeline.</span></div>
+        </div>
+      </div>
+
+      <div class="delta-agents">
+        <div class="agent-card">
+          <h4><i class='bx bx-file' aria-hidden="true"></i> Remittance agent</h4>
+          <ul>
+            <li>LLM-based extraction with fallback parsing</li>
+            <li>Handles PDF and TXT inputs</li>
+            <li>Pulls invoice #, ticket #, amount, deductions</li>
+          </ul>
+        </div>
+        <div class="agent-card">
+          <h4><i class='bx bx-check-double' aria-hidden="true"></i> Cash application agent</h4>
+          <ul>
+            <li>Deterministic matching against invoice data</li>
+            <li>Pandas-based data processing</li>
+            <li>Automated cash-application decisions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pc-tags" style="margin-top:24px;">
+        <span>Python</span><span>LangGraph</span><span>Groq LLM</span><span>GPT-OSS-120B</span>
+        <span>Streamlit</span><span>Pandas</span><span>PyMuPDF</span><span>PaddleOCR</span><span>SQLite</span>
+      </div>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="project-card reveal" data-category="ai-ml python" data-modal="ppe">
+        <div class="pc-top" style="background:linear-gradient(90deg,#6a5cff,#3fd0e8);"></div>
+        <div class="pc-body">
+          <span class="pc-kicker"><i class='bx bx-camera' aria-hidden="true"></i> Computer Vision</span>
+          <h3>PPE Kit Detection Using Deep Learning</h3>
+          <p class="pc-desc">A computer-vision system that detects personal protective equipment in images/video, comparing YOLOv8 variants against Faster R-CNN with a ResNet50 backbone.</p>
+          <div class="pc-tags"><span>YOLOv8</span><span>Faster R-CNN</span><span>ResNet50</span><span>OpenCV</span></div>
+          <div class="pc-result"><i class='bx bx-line-chart' aria-hidden="true"></i> YOLOv8m: ~0.864 mAP@0.5</div>
+          <div class="pc-actions" style="margin-top:16px;">
+            <button class="btn btn-outline btn-sm" data-modal-open="ppe"><i class='bx bx-detail' aria-hidden="true"></i> View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="ai-ml python" data-modal="tts">
+        <div class="pc-top" style="background:#1f6feb;"></div>
+        <div class="pc-body">
+          <span class="pc-kicker"><i class='bx bx-microphone' aria-hidden="true"></i> AI / NLP</span>
+          <h3>Text to Speech Converter</h3>
+          <p class="pc-desc">A TTS system that converts written text into natural, human-like spoken audio.</p>
+          <div class="pc-tags"><span>Python</span><span>TensorFlow</span><span>NLP</span></div>
+          <div class="pc-actions" style="margin-top:16px;">
+            <a href="https://github.com/Venkyvtu/text-to-voice-converter" class="btn btn-outline btn-sm" target="_blank" rel="noopener"><i class='bx bxl-github' aria-hidden="true"></i> GitHub</a>
+            <button class="btn btn-ghost btn-sm" data-modal-open="tts"><i class='bx bx-detail' aria-hidden="true"></i> Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="java web" data-modal="banking">
+        <div class="pc-top" style="background:#f78166;"></div>
+        <div class="pc-body">
+          <span class="pc-kicker"><i class='bx bx-building-house' aria-hidden="true"></i> Web Application</span>
+          <h3>Banking Application</h3>
+          <p class="pc-desc">A banking application covering user registration, account management and transaction handling with secure data management.</p>
+          <div class="pc-tags"><span>Java</span><span>JSP</span><span>MySQL</span></div>
+          <div class="pc-actions" style="margin-top:16px;">
+            <a href="https://github.com/Venkyvtu/banking_app" class="btn btn-outline btn-sm" target="_blank" rel="noopener"><i class='bx bxl-github' aria-hidden="true"></i> GitHub</a>
+            <button class="btn btn-ghost btn-sm" data-modal-open="banking"><i class='bx bx-detail' aria-hidden="true"></i> Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="java web" data-modal="worklog">
+        <div class="pc-top" style="background:#58a6ff;"></div>
+        <div class="pc-body">
+          <span class="pc-kicker"><i class='bx bx-time-five' aria-hidden="true"></i> Web Application</span>
+          <h3>Employee Work Log</h3>
+          <p class="pc-desc">A system to track employee work hours, tasks and productivity for accurate, efficient record-keeping.</p>
+          <div class="pc-tags"><span>Java</span><span>JSP</span><span>MySQL</span></div>
+          <div class="pc-actions" style="margin-top:16px;">
+            <button class="btn btn-outline btn-sm" data-modal-open="worklog"><i class='bx bx-detail' aria-hidden="true"></i> View details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="ai-ml python" data-modal="bone">
+        <div class="pc-top" style="background:#6f42c1;"></div>
+        <div class="pc-body">
+          <span class="pc-kicker"><i class='bx bx-scan' aria-hidden="true"></i> Computer Vision</span>
+          <h3>Bone Fracture Detection</h3>
+          <p class="pc-desc">A CNN-based system that analyzes medical images to detect bone fractures as a diagnostic aid for radiologists.</p>
+          <div class="pc-tags"><span>Python</span><span>TensorFlow</span><span>OpenCV</span></div>
+          <div class="pc-actions" style="margin-top:16px;">
+            <a href="https://github.com/Venkyvtu/ML-project-on-bone-facture" class="btn btn-outline btn-sm" target="_blank" rel="noopener"><i class='bx bxl-github' aria-hidden="true"></i> GitHub</a>
+            <button class="btn btn-ghost btn-sm" data-modal-open="bone"><i class='bx bx-detail' aria-hidden="true"></i> Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="ai-ml python" data-modal="objdet">
+        <div class="pc-top" style="background:#e36209;"></div>
+        <div class="pc-body">
+          <span class="pc-kicker"><i class='bx bx-video' aria-hidden="true"></i> Computer Vision</span>
+          <h3>Object Detection</h3>
+          <p class="pc-desc">A real-time object detection system using OpenCV to identify and track objects in video feeds.</p>
+          <div class="pc-tags"><span>Python</span><span>OpenCV</span><span>Computer Vision</span></div>
+          <div class="pc-actions" style="margin-top:16px;">
+            <a href="https://github.com/Venkyvtu/object-recognization" class="btn btn-outline btn-sm" target="_blank" rel="noopener"><i class='bx bxl-github' aria-hidden="true"></i> GitHub</a>
+            <button class="btn btn-ghost btn-sm" data-modal-open="objdet"><i class='bx bx-detail' aria-hidden="true"></i> Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="web" data-modal="finance">
+        <div class="pc-top" style="background:#238636;"></div>
+        <div class="pc-body">
+          <span class="pc-kicker"><i class='bx bx-wallet' aria-hidden="true"></i> Web Application</span>
+          <h3>Financial Management</h3>
+          <p class="pc-desc">A web app for tracking personal expenses, managing budgets and generating financial reports.</p>
+          <div class="pc-tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+          <div class="pc-actions" style="margin-top:16px;">
+            <a href="https://github.com/Venkyvtu/financial" class="btn btn-outline btn-sm" target="_blank" rel="noopener"><i class='bx bxl-github' aria-hidden="true"></i> GitHub</a>
+            <button class="btn btn-ghost btn-sm" data-modal-open="finance"><i class='bx bx-detail' aria-hidden="true"></i> Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== Contact ===================== -->
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="section-head">
+      <span class="section-kicker">Get in touch</span>
+      <h2 id="contact-h">Let's talk</h2>
+      <p>Open to software development and AI/ML roles, collaborations, or just a technical conversation.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-list">
+          <a class="contact-info-item" href="mailto:bankavenkateswarlu4@gmail.com">
+            <i class='bx bx-envelope' aria-hidden="true"></i>
+            <span><span class="ci-label">Email</span><span class="ci-value">bankavenkateswarlu4@gmail.com</span></span>
+          </a>
+          <a class="contact-info-item" href="tel:+919346752894">
+            <i class='bx bx-phone' aria-hidden="true"></i>
+            <span><span class="ci-label">Phone</span><span class="ci-value">+91 93467 52894</span></span>
+          </a>
+          <a class="contact-info-item" href="https://www.linkedin.com/in/venkateswarlu-banka-902835196" target="_blank" rel="noopener">
+            <i class='bx bxl-linkedin' aria-hidden="true"></i>
+            <span><span class="ci-label">LinkedIn</span><span class="ci-value">/venkateswarlu-banka</span></span>
+          </a>
+          <a class="contact-info-item" href="https://github.com/Venkyvtu" target="_blank" rel="noopener">
+            <i class='bx bxl-github' aria-hidden="true"></i>
+            <span><span class="ci-label">GitHub</span><span class="ci-value">/Venkyvtu</span></span>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+          <i class='bx bx-send' aria-hidden="true"></i> Send message
+        </button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="form-note">This form is frontend-only for now — connect it to an email service (e.g. Formspree, EmailJS) or your own backend to make it send.</p>
+      </form>
+    </div>
+  </section>
+
 </main>
-<footer class="ft"><p class="mono">Banka Venkateswarlu · Software Developer · AI/ML Engineer</p></footer>
 
-<dialog id="cs" aria-labelledby="cst">
-  <div class="cs-in">
-    <button id="cb" class="btn" type="button">Close</button>
-    <h2 id="cst" class="big sm"></h2>
-    <div id="cbody"></div>
+<footer>
+  <p>&copy; <span id="footerYear"></span> Banka Venkateswarlu. All rights reserved.</p>
+  <p>Designed &amp; built with <span class="footer-heart">&hearts;</span> by Venkateswarlu</p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class='bx bx-up-arrow-alt' aria-hidden="true"></i>
+</button>
+
+<!-- ===================== Project details modal ===================== -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close details"><i class='bx bx-x' aria-hidden="true"></i></button>
+    <h3 id="modalTitle"></h3>
+    <div class="modal-tags" id="modalTags"></div>
+    <div id="modalBody"></div>
+    <div class="modal-actions" id="modalActions"></div>
   </div>
-</dialog>
+</div>
+
 <script>
-(() => {
-'use strict';
-const $ = (s, r = document) => r.querySelector(s);
-const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const FINE = matchMedia('(hover:hover) and (pointer:fine)').matches;
-const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
-const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; };
+(function(){
+  'use strict';
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* Assets sit next to index.html (same names as your existing site). Set a value to '' to hide it. */
-const CFG = {
-  photo: 'photo1.jpg',
-  video: '',
-  resume: 'resume.pdf',
-  email: 'bankavenkateswarlu4@gmail.com',
-  phone: '+91 93467 52894',
-  github: 'https://github.com/Venkyvtu',
-  linkedin: 'https://www.linkedin.com/in/venkateswarlu-banka-902835196'
-};
+  /* ---------- Mobile nav ---------- */
+  var navToggle = document.getElementById('navToggle');
+  var primaryNav = document.getElementById('primaryNav');
+  navToggle.addEventListener('click', function(){
+    var isOpen = primaryNav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    navToggle.innerHTML = isOpen ? "<i class='bx bx-x' aria-hidden=\"true\"></i>" : "<i class='bx bx-menu' aria-hidden=\"true\"></i>";
+  });
+  primaryNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      primaryNav.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded','false');
+      navToggle.innerHTML = "<i class='bx bx-menu' aria-hidden=\"true\"></i>";
+    });
+  });
 
-/* ---------- Data ---------- */
-const G = [
-  ['Programming', 'Core languages I build with.', [['Py', 'Python', 'Delta platform'], ['Jv', 'Java'], ['C', 'C'], ['JS', 'JavaScript']]],
-  ['Web', 'Front end and back end web development.', [['Ht', 'HTML'], ['Cs', 'CSS'], ['Re', 'React'], ['No', 'Node.js'], ['Ex', 'Express'], ['Jp', 'JSP'], ['Ph', 'PHP', 'Financial Management'], ['Sv', 'Servlets']]],
-  ['Database', 'Relational, document and graph data stores.', [['My', 'MySQL'], ['Mg', 'MongoDB'], ['Sq', 'SQLite', 'Delta platform'], ['Ss', 'SQL Server', 'Delta platform'], ['N4', 'Neo4j']]],
-  ['AI / ML', 'Machine learning and computer vision.', [['Ml', 'Machine Learning'], ['Dl', 'Deep Learning'], ['Cv', 'Computer Vision', 'PPE kit detection'], ['Tf', 'TensorFlow'], ['Pt', 'PyTorch'], ['Oc', 'OpenCV', 'PPE kit detection'], ['Yo', 'YOLO', 'PPE kit detection']]],
-  ['Generative AI', 'LLM applications and agents.', [['Ll', 'LLMs', 'Delta platform'], ['Ga', 'Generative AI'], ['Aa', 'Agentic AI', 'Delta platform'], ['Lg', 'LangGraph', 'Delta platform'], ['Rg', 'RAG'], ['Pe', 'Prompt Engineering'], ['Gr', 'Guardrails'], ['Ag', 'AI Agents', 'Delta platform'], ['Ao', 'AI Observability']]],
-  ['Cloud & DevOps', 'AWS, Azure AI services and tooling.', [['Aw', 'AWS'], ['Br', 'Amazon Bedrock'], ['La', 'Lambda'], ['S3', 'S3'], ['Ct', 'CloudTrail'], ['Eb', 'EventBridge'], ['Xr', 'X-Ray'], ['Az', 'Azure OpenAI'], ['Dk', 'Docker'], ['Gt', 'Git']]]
-];
+  /* ---------- Smooth scroll with header offset ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = link.getAttribute('href');
+      if(id.length < 2) return;
+      var target = document.querySelector(id);
+      if(!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - 64;
+      window.scrollTo({top: top, behavior: reduceMotion ? 'auto' : 'smooth'});
+      history.pushState(null, '', id);
+    });
+  });
 
-const AG = [
-  ['Remittance Agent', ['Processes remittance advice', 'Extracts invoice numbers', 'Extracts ticket numbers', 'Extracts payment amounts', 'Extracts deductions', 'PDF/TXT processing', 'LLM-based extraction', 'Fallback parsing']],
-  ['Cash Application Agent', ['Matches payments with invoices', 'Uses deterministic matching', 'Uses pandas/data processing', 'Supports automated cash application decisions']],
-  ['Dispute Resolution Agent', []],
-  ['Refund Analysis Agent', []],
-  ['Revenue Leakage Agent', []]
-];
-
-/* Every field except t and tag is optional. Add prob, sol, mine, res, tech, feat to any project to expand its case study. */
-const P = [
-  { t: 'Delta Autonomous Revenue Assurance Platform', tag: 'Agentic AI', sum: 'Agentic AI for Revenue Assurance: an AI-powered prototype built around the Order-to-Cash process.',
-    prob: 'Reconciling remittance advice against invoices, and routing disputes, refunds and leakage, is a manual multi-step process that is easy to get wrong at scale.',
-    sol: 'A LangGraph-orchestrated pipeline of specialised agents, each handling one stage of the workflow, coordinated through a Streamlit interface.',
-    flow: AG.map(a => a[0]),
-    tech: ['Python', 'LangGraph', 'Groq', 'GPT-OSS-120B', 'Streamlit', 'Pandas', 'PyMuPDF', 'PaddleOCR', 'SQLite / SQL Server', 'Agentic AI'],
-    feat: ['Remittance Agent: LLM-based extraction of invoice numbers, ticket numbers, amounts and deductions from PDF and TXT files, with fallback parsing', 'Cash Application Agent: deterministic, pandas-based matching against invoice data for automated cash application decisions', 'Dispute Resolution, Refund Analysis and Revenue Leakage agents extending the pipeline end to end'],
-    mine: 'Designed the agent pipeline and orchestration flow, and implemented the extraction and matching logic for the core agents.',
-    res: 'A working end-to-end prototype demonstrating automated remittance-to-resolution processing.' },
-  { t: 'PPE Kit Detection Using Deep Learning', tag: 'Computer Vision', sum: 'A computer-vision project comparing deep learning architectures for detecting personal protective equipment in images.',
-    prob: 'Manually verifying PPE compliance from footage or images is slow and inconsistent.',
-    sol: 'Trained and evaluated YOLOv8 variants (n, s, m) alongside a Faster R-CNN model with a ResNet50 backbone, using OpenCV for image processing.',
-    tech: ['YOLOv8n', 'YOLOv8s', 'YOLOv8m', 'Faster R-CNN', 'ResNet50', 'OpenCV', 'Computer Vision'],
-    feat: ['YOLOv8 variants benchmarked against Faster R-CNN with ResNet50', 'OpenCV-based image preprocessing', 'Evaluation with standard object-detection metrics'],
-    mine: 'Trained and evaluated each model variant and compared results across architectures.',
-    res: 'YOLOv8m achieved approximately mAP@0.5 = 0.864, the strongest result among the variants tested.' },
-  { t: 'VMeet', tag: 'Video meeting app', sum: 'Video Meeting Application' },
-  { t: 'Banking Application', tag: 'Java · JSP · MySQL', sum: 'A banking application covering user registration, account management and transaction handling.',
-    prob: 'Core banking operations need a secure, structured system for managing accounts and transactions.',
-    sol: 'A Java/JSP web application backed by MySQL with secure data handling.',
-    tech: ['Java', 'JSP', 'MySQL'], feat: ['User registration and account management', 'Transaction handling', 'Secure data management with MySQL'],
-    mine: 'Implemented the application logic and database design using Java, JSP and MySQL.', gh: 'https://github.com/Venkyvtu/banking_app' },
-  { t: 'Employee Time Tracker', tag: 'Java · JSP · MySQL', sum: 'A system to track employee work hours, tasks and productivity.',
-    prob: 'Businesses need accurate, efficient record-keeping for employee time and task management.',
-    sol: 'A Java/JSP application backed by MySQL for logging hours, tasks and productivity data.',
-    tech: ['Java', 'JSP', 'MySQL'], feat: ['Work hour tracking', 'Task logging', 'Productivity record-keeping'], mine: 'Built the application using Java, JSP and MySQL.' },
-  { t: 'Bone Fracture Detection', tag: 'Python · TensorFlow', sum: 'A CNN-based system that analyzes medical images to detect bone fractures, as a diagnostic aid.',
-    prob: 'Reading X-rays for fractures is time-intensive and benefits from an automated first pass.',
-    sol: 'A CNN image classification model trained with TensorFlow, with OpenCV preprocessing.',
-    tech: ['Python', 'TensorFlow', 'OpenCV'], feat: ['CNN-based fracture classification', 'OpenCV image preprocessing'], mine: 'Built and trained the CNN model and preprocessing pipeline.', gh: 'https://github.com/Venkyvtu/ML-project-on-bone-facture' },
-  { t: 'Object Detection', tag: 'Python · OpenCV', sum: 'A real-time object detection system for identifying and tracking objects in video feeds.',
-    prob: 'Identifying and tracking multiple objects in a live video feed in real time.',
-    sol: 'An OpenCV-based pipeline for real-time detection and tracking.',
-    tech: ['Python', 'OpenCV', 'Computer Vision'], feat: ['Real-time detection in video feeds', 'Object tracking across frames'], mine: 'Implemented the detection and tracking pipeline with OpenCV.', gh: 'https://github.com/Venkyvtu/object-recognization' },
-  { t: 'Financial Management', tag: 'PHP · MySQL · JavaScript', sum: 'A web app for tracking personal expenses, managing budgets and generating financial reports.',
-    prob: 'Individuals need a simple way to track spending and see it summarised into a budget picture.',
-    sol: 'A PHP/MySQL web app with JavaScript-driven interactivity.',
-    tech: ['PHP', 'MySQL', 'JavaScript'], feat: ['Expense tracking', 'Budget management', 'Financial reporting'], mine: 'Built the application end to end with PHP, MySQL and JavaScript.', gh: 'https://github.com/Venkyvtu/financial' },
-  { t: 'Text-to-Speech Converter', tag: 'Python · TensorFlow', sum: 'A converter that turns written text into natural, human-like spoken audio.',
-    prob: 'Turning arbitrary text into clear, natural audio takes more than basic text-to-phoneme mapping.',
-    sol: 'NLP and deep learning with TensorFlow to synthesize speech from input text.',
-    tech: ['Python', 'TensorFlow', 'NLP'], feat: ['Text-to-speech synthesis pipeline'], mine: 'Built the conversion pipeline from text input to synthesized audio.', gh: 'https://github.com/Venkyvtu/text-to-voice-converter' }
-];
-
-/* ---------- Menu ---------- */
-const mb = $('#mb'), mn = $('#menu');
-const setMenu = o => {
-  mn.classList.toggle('open', o);
-  mb.setAttribute('aria-expanded', String(o));
-  mb.textContent = o ? 'CLOSE' : 'MENU';
-  document.body.style.overflow = o ? 'hidden' : '';
-  if (o) $('a', mn).focus();
-};
-mb.addEventListener('click', () => setMenu(!mn.classList.contains('open')));
-mn.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
-addEventListener('keydown', e => {
-  if (e.key === 'Escape' && mn.classList.contains('open')) { setMenu(false); mb.focus(); }
-});
-
-/* ---------- Reveal ---------- */
-const io = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-}), { threshold: .15 });
-$$('.rv').forEach(x => RM ? x.classList.add('in') : io.observe(x));
-const abIo = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('on', e.isIntersecting)), { rootMargin: '-35% 0px -35% 0px' });
-$$('.ab-l').forEach(x => RM ? x.classList.add('on') : abIo.observe(x));
-
-/* ---------- Hero network + optional video ---------- */
-const cv = $('#net'), cx = cv.getContext('2d');
-let W = 0, H = 0, pts = [], heroVis = true, mx = -999, my = -999;
-function sizeNet() {
-  const dpr = Math.min(devicePixelRatio || 1, 2);
-  W = cv.clientWidth; H = cv.clientHeight;
-  cv.width = W * dpr; cv.height = H * dpr;
-  cx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  const n = W < 700 ? 28 : 56;
-  pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3 }));
-  if (RM) frame();
-}
-function frame() {
-  if (heroVis && !document.hidden) {
-    cx.clearRect(0, 0, W, H);
-    cx.fillStyle = '#fff';
-    for (const p of pts) {
-      if (!RM) { p.x += p.vx; p.y += p.vy; }
-      if (p.x < 0 || p.x > W) p.vx *= -1;
-      if (p.y < 0 || p.y > H) p.vy *= -1;
-      cx.globalAlpha = .5;
-      cx.fillRect(p.x - 1, p.y - 1, 2, 2);
-    }
-    cx.strokeStyle = '#fff';
-    for (let i = 0; i < pts.length; i++) {
-      for (let j = i + 1; j < pts.length; j++) {
-        const d = Math.hypot(pts[i].x - pts[j].x, pts[i].y - pts[j].y);
-        if (d < 130) { cx.globalAlpha = (1 - d / 130) * .22; cx.beginPath(); cx.moveTo(pts[i].x, pts[i].y); cx.lineTo(pts[j].x, pts[j].y); cx.stroke(); }
-      }
-      const dm = Math.hypot(pts[i].x - mx, pts[i].y - my);
-      if (dm < 170) { cx.globalAlpha = (1 - dm / 170) * .5; cx.beginPath(); cx.moveTo(pts[i].x, pts[i].y); cx.lineTo(mx, my); cx.stroke(); }
-    }
-    cx.globalAlpha = 1;
+  /* ---------- Active nav link on scroll ---------- */
+  var navLinks = Array.prototype.slice.call(primaryNav.querySelectorAll('a'));
+  var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  function updateActiveNav(){
+    var scrollPos = window.pageYOffset + 110;
+    var current = sections[0];
+    sections.forEach(function(sec){ if(sec.offsetTop <= scrollPos) current = sec; });
+    navLinks.forEach(function(a){ a.classList.toggle('is-active', a.getAttribute('href') === '#' + current.id); });
   }
-  if (!RM) requestAnimationFrame(frame);
-}
-sizeNet();
-if (!RM) requestAnimationFrame(frame);
-new IntersectionObserver(es => { heroVis = es[0].isIntersecting; }).observe($('#home'));
-$('#home').addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; });
-$('#home').addEventListener('pointerleave', () => { mx = my = -999; });
+  window.addEventListener('scroll', updateActiveNav, {passive:true});
+  updateActiveNav();
 
-if (CFG.video) {
-  const v = $('#hv');
-  v.addEventListener('canplay', () => { v.classList.add('on'); if (!RM) v.play().catch(() => {}); }, { once: true });
-  v.preload = 'auto'; v.src = CFG.video;
-}
+  /* ---------- Scroll reveal ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduceMotion){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, {threshold:.15});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
 
-/* ---------- Cursor + hero parallax ---------- */
-if (FINE && !RM) {
-  document.body.classList.add('cur');
-  const d = el('div', 'cd'), r = el('div', 'cr');
-  d.setAttribute('aria-hidden', 'true'); r.setAttribute('aria-hidden', 'true');
-  document.body.append(d, r);
-  const l1 = $('.l1'), l2 = $('.l2');
-  let x = 0, y = 0, rx = 0, ry = 0, tx = 0, ty = 0, px = 0, py = 0;
-  addEventListener('pointermove', e => {
-    x = e.clientX; y = e.clientY; tx = x / innerWidth - .5; ty = y / innerHeight - .5;
-    d.style.transform = `translate3d(${x}px,${y}px,0)`;
-  }, { passive: true });
-  document.addEventListener('pointerover', e => {
-    r.classList.toggle('h', !!e.target.closest('a,button,input,.card'));
-    r.classList.toggle('p', !!e.target.closest('.pr,.hc,.fe'));
+  /* ---------- Back to top ---------- */
+  var backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    backToTop.classList.toggle('is-visible', window.pageYOffset > 500);
+  }, {passive:true});
+  backToTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior: reduceMotion ? 'auto' : 'smooth'});
   });
-  (function loop() {
-    rx += (x - rx) * .16; ry += (y - ry) * .16;
-    r.style.transform = `translate3d(${rx}px,${ry}px,0)`;
-    if (heroVis) {
-      px += (tx - px) * .07; py += (ty - py) * .07;
-      l1.style.transform = `translate3d(${px * 46}px,${py * 18}px,0)`;
-      l2.style.transform = `translate3d(${px * -34}px,${py * -12}px,0)`;
+
+  /* ---------- Typing effect for role line ---------- */
+  var roleText = document.getElementById('roleText');
+  var roles = ['Software Developer', 'AI/ML Engineer', 'Generative AI Developer', 'Agentic AI Developer'];
+  if(reduceMotion){
+    roleText.textContent = roles.join(' · ');
+  } else {
+    var ri = 0, ci = 0, deleting = false;
+    function tick(){
+      var word = roles[ri];
+      if(!deleting){
+        ci++;
+        roleText.textContent = word.slice(0, ci);
+        if(ci === word.length){ deleting = true; setTimeout(tick, 1400); return; }
+      } else {
+        ci--;
+        roleText.textContent = word.slice(0, ci);
+        if(ci === 0){ deleting = false; ri = (ri + 1) % roles.length; }
+      }
+      setTimeout(tick, deleting ? 45 : 85);
     }
-    requestAnimationFrame(loop);
-  })();
-}
+    tick();
+  }
 
-/* ---------- ID card ---------- */
-const card = $('#card'), cw = $('#cw'), ff = $('#ff'), fb = $('#fb'), flipBtn = $('#flip');
-let flipped = false, tilt = [0, 0, 0, 0];
-const drawCard = () => { card.style.transform = `translate3d(${tilt[2]}px,${tilt[3]}px,0) rotateX(${tilt[0]}deg) rotateY(${tilt[1] + (flipped ? 180 : 0)}deg)`; };
-const flip = () => {
-  flipped = !flipped;
-  ff.toggleAttribute('inert', flipped); fb.toggleAttribute('inert', !flipped);
-  flipBtn.setAttribute('aria-pressed', String(flipped));
-  drawCard();
-};
-card.addEventListener('click', e => { if (!e.target.closest('a')) flip(); });
-flipBtn.addEventListener('click', flip);
-if (FINE && !RM) {
-  cw.addEventListener('pointermove', e => {
-    const r = card.getBoundingClientRect();
-    const px = clamp((e.clientX - r.left) / r.width, -.3, 1.3) - .5, py = clamp((e.clientY - r.top) / r.height, -.3, 1.3) - .5;
-    card.style.transition = 'transform .12s linear';
-    tilt = [-py * 18, px * 22, px * 14, py * 14]; drawCard();
+  /* ---------- Animated stat counters ---------- */
+  var statEls = document.querySelectorAll('.stat-num');
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    if(reduceMotion){ el.textContent = target; return; }
+    var start = 0, duration = 1200, startTime = null;
+    function step(ts){
+      if(!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      el.textContent = Math.floor(progress * (target - start) + start);
+      if(progress < 1) requestAnimationFrame(step); else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var statIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ animateCount(entry.target); statIo.unobserve(entry.target); }
+      });
+    }, {threshold:.6});
+    statEls.forEach(function(el){ statIo.observe(el); });
+  } else {
+    statEls.forEach(animateCount);
+  }
+
+  /* ---------- Project filtering ---------- */
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var filterable = document.querySelectorAll('#projectsGrid .project-card, .delta-feature');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      var filter = btn.getAttribute('data-filter');
+      filterable.forEach(function(card){
+        var cats = (card.getAttribute('data-category') || '').split(' ');
+        var show = filter === 'all' || cats.indexOf(filter) !== -1;
+        card.classList.toggle('is-hidden', !show);
+      });
+    });
   });
-  cw.addEventListener('pointerleave', () => { card.style.transition = ''; tilt = [0, 0, 0, 0]; drawCard(); });
-}
-if (CFG.photo) {
-  const img = new Image();
-  img.alt = 'Portrait of Banka Venkateswarlu'; img.loading = 'lazy';
-  img.addEventListener('load', () => $('#ph').replaceChildren(img));
-  img.src = CFG.photo;
-}
 
-/* ---------- Skills periodic table ---------- */
-const pt = $('#pt'), info = $('#info');
-let num = 0;
-G.forEach(([g, desc, items]) => {
-  const s = el('section', 'grp');
-  s.setAttribute('aria-label', g);
-  s.append(el('h3', null, g));
-  const row = el('div', 'els');
-  items.forEach(([sym, name, use]) => {
-    num++;
-    const b = el('button', 'elm');
-    b.type = 'button';
-    b.append(el('i', null, String(num)), el('b', null, sym), el('span', null, name));
-    const show = () => {
-      info.replaceChildren(el('strong', null, name), el('span', null, 'Category: ' + g), el('span', null, desc), el('span', null, 'Where I used it: ' + (use || 'Part of my skill set')));
-      $$('.elm.on').forEach(x => x.classList.remove('on'));
-      b.classList.add('on');
-    };
-    b.addEventListener('mouseenter', show); b.addEventListener('focus', show); b.addEventListener('click', show);
-    row.append(b);
-  });
-  s.append(row); pt.append(s);
-});
-
-/* ---------- Delta agent flow ---------- */
-const flow = $('#flow'), agp = $('#ag');
-AG.forEach(([name, items], i) => {
-  const li = el('li');
-  li.style.setProperty('--d', (i * .7) + 's');
-  const b = el('button', 'ag', name);
-  b.type = 'button';
-  const show = () => {
-    const box = [el('strong', null, name)];
-    if (items.length) { const ul = el('ul'); items.forEach(t => ul.append(el('li', null, t))); box.push(ul); }
-    else box.push(el('span', null, 'One stage of the Delta agent workflow.'));
-    agp.replaceChildren(...box);
-    $$('.ag.on').forEach(x => x.classList.remove('on'));
-    b.classList.add('on');
+  /* ---------- Project detail modal ---------- */
+  var projectData = {
+    delta: {
+      title: 'Delta — Autonomous Revenue Assurance Platform',
+      tags: ['Python','LangGraph','Groq LLM','GPT-OSS-120B','Streamlit','Pandas','PyMuPDF','PaddleOCR','SQLite'],
+      overview: 'An AI-powered Revenue Assurance Platform prototype built around the Order-to-Cash process, using a chain of LangGraph-orchestrated agents.',
+      problem: 'Reconciling remittance advice against invoices, and routing disputes/refunds/leakage, is a manual, multi-step process that is easy to get wrong at scale.',
+      solution: 'A LangGraph-orchestrated pipeline of specialised agents — Remittance, Cash Application, Dispute Resolution, Refund Analysis and Revenue Leakage — each handling one stage of the workflow, coordinated through a Streamlit interface.',
+      features: [
+        'Remittance Agent: LLM-based extraction of invoice numbers, ticket numbers, amounts and deductions, with fallback parsing and PDF/TXT support',
+        'Cash Application Agent: deterministic, pandas-based matching against invoice data for automated cash-application decisions',
+        'Dispute Resolution, Refund Analysis and Revenue Leakage agents extending the pipeline end-to-end',
+        'LangGraph-based orchestration across the full agent chain'
+      ],
+      contribution: 'Designed the agent pipeline and orchestration flow, and implemented the extraction and matching logic for the core agents.',
+      results: 'A working end-to-end prototype demonstrating automated remittance-to-resolution processing.',
+      github: null, demo: null
+    },
+    ppe: {
+      title: 'PPE Kit Detection Using Deep Learning',
+      tags: ['YOLOv8','YOLOv8n','YOLOv8s','YOLOv8m','Faster R-CNN','ResNet50','OpenCV'],
+      overview: 'A computer-vision project comparing multiple deep learning architectures for detecting personal protective equipment in images.',
+      problem: 'Manually verifying PPE compliance from footage or images is slow and inconsistent.',
+      solution: 'Trained and evaluated several YOLOv8 variants (n/s/m) alongside a Faster R-CNN model with a ResNet50 backbone, using OpenCV for image processing.',
+      features: [
+        'Multiple YOLOv8 variants benchmarked against Faster R-CNN + ResNet50',
+        'OpenCV-based image preprocessing pipeline',
+        'Model evaluation using standard object-detection metrics'
+      ],
+      contribution: 'Trained and evaluated each model variant and compared results across architectures.',
+      results: 'YOLOv8m achieved approximately 0.864 mAP@0.5 in project evaluation, the strongest result among the variants tested.',
+      github: null, demo: null
+    },
+    tts: {
+      title: 'Text to Speech Converter',
+      tags: ['Python','TensorFlow','NLP'],
+      overview: 'A Text to Speech (TTS) converter that transforms written text into spoken words with a natural, human-like delivery.',
+      problem: 'Turning arbitrary written text into clear, natural-sounding audio requires more than basic text-to-phoneme mapping.',
+      solution: 'Applied NLP and deep learning techniques with TensorFlow to synthesize speech from input text.',
+      features: ['Text-to-speech synthesis pipeline', 'Built with TensorFlow and core NLP techniques'],
+      contribution: 'Built the conversion pipeline from text input through to synthesized audio output.',
+      results: null,
+      github: 'https://github.com/Venkyvtu/text-to-voice-converter', demo: null
+    },
+    banking: {
+      title: 'Banking Application',
+      tags: ['Java','JSP','MySQL'],
+      overview: 'A comprehensive banking application for user registration, account management and transaction handling.',
+      problem: 'Core banking operations need a secure, structured system for managing accounts and transactions.',
+      solution: 'A Java/JSP web application backed by MySQL, covering registration, account management and transactions with secure data handling.',
+      features: ['User registration and account management', 'Transaction handling', 'Secure data management with MySQL'],
+      contribution: 'Implemented the application logic and database design using Java, JSP and MySQL.',
+      results: null,
+      github: 'https://github.com/Venkyvtu/banking_app', demo: null
+    },
+    worklog: {
+      title: 'Employee Work Log',
+      tags: ['Java','JSP','MySQL'],
+      overview: 'A system to track employees\' work hours, tasks and productivity.',
+      problem: 'Businesses need accurate, efficient record-keeping for employee time and task management.',
+      solution: 'A Java/JSP application backed by MySQL for logging hours, tasks and productivity data.',
+      features: ['Work hour tracking', 'Task logging', 'Productivity record-keeping'],
+      contribution: 'Built the application using Java, JSP and MySQL.',
+      results: null,
+      github: null, demo: null
+    },
+    bone: {
+      title: 'Bone Fracture Detection',
+      tags: ['Python','TensorFlow','OpenCV'],
+      overview: 'A machine learning system using a CNN to analyze medical images and detect bone fractures.',
+      problem: 'Reading X-rays for fractures is time-intensive and benefits from an automated first pass.',
+      solution: 'A CNN-based image classification model trained with TensorFlow and OpenCV for preprocessing, intended as a diagnostic aid.',
+      features: ['CNN-based fracture classification', 'OpenCV image preprocessing'],
+      contribution: 'Built and trained the CNN model and preprocessing pipeline.',
+      results: null,
+      github: 'https://github.com/Venkyvtu/ML-project-on-bone-facture', demo: null
+    },
+    objdet: {
+      title: 'Object Detection',
+      tags: ['Python','OpenCV','Computer Vision'],
+      overview: 'A real-time object detection system for identifying and tracking objects in video feeds.',
+      problem: 'Identifying and tracking multiple objects in a live video feed in real time.',
+      solution: 'An OpenCV-based pipeline for real-time detection and tracking with image processing techniques.',
+      features: ['Real-time detection in video feeds', 'Object tracking across frames'],
+      contribution: 'Implemented the detection and tracking pipeline with OpenCV.',
+      results: null,
+      github: 'https://github.com/Venkyvtu/object-recognization', demo: null
+    },
+    finance: {
+      title: 'Financial Management',
+      tags: ['PHP','MySQL','JavaScript'],
+      overview: 'A web application for tracking personal expenses, managing budgets and generating financial reports.',
+      problem: 'Individuals need a simple way to track spending and see it summarised into a budget picture.',
+      solution: 'A PHP/MySQL web app with JavaScript-driven interactivity for entering expenses and generating reports.',
+      features: ['Expense tracking', 'Budget management', 'Financial reporting'],
+      contribution: 'Built the application end-to-end with PHP, MySQL and JavaScript.',
+      results: null,
+      github: 'https://github.com/Venkyvtu/financial', demo: null
+    }
   };
-  b.addEventListener('mouseenter', show); b.addEventListener('focus', show); b.addEventListener('click', show);
-  li.append(b); flow.append(li);
-});
 
-/* ---------- Projects + case study dialog ---------- */
-const dlg = $('#cs'), cbody = $('#cbody');
-let lastFocus = null;
-const pl = $('#pl');
-P.forEach((p, i) => {
-  const li = el('li'), b = el('button', 'pr');
-  b.type = 'button'; b.dataset.open = i; b.setAttribute('aria-haspopup', 'dialog');
-  b.append(el('b', null, p.t), el('span', null, p.tag));
-  li.append(b); pl.append(li);
-});
-function section(title, nodes, i) {
-  const s = el('section', 'cs-s');
-  s.style.animationDelay = (i * 80) + 'ms';
-  s.append(el('h3', null, title), ...nodes);
-  return s;
-}
-const list = (a, ord) => { const u = el(ord ? 'ol' : 'ul'); a.forEach(t => u.append(el('li', null, t))); return u; };
-function openCase(i) {
-  const p = P[i];
-  lastFocus = document.activeElement;
-  $('#cst').textContent = p.t;
-  const parts = [['PROJECT', [el('p', null, p.sum || p.tag)]]];
-  if (p.prob) parts.push(['PROBLEM', [el('p', null, p.prob)]]);
-  if (p.sol) parts.push(['SOLUTION', [el('p', null, p.sol)]]);
-  if (p.flow) parts.push(['ARCHITECTURE', [list(p.flow, true)]]);
-  if (p.tech) parts.push(['TECHNOLOGIES', [list(p.tech)]]);
-  if (p.feat) parts.push(['KEY FEATURES', [list(p.feat)]]);
-  if (p.mine) parts.push(['MY CONTRIBUTION', [el('p', null, p.mine)]]);
-  if (p.res) parts.push(['RESULTS', [el('p', null, p.res)]]);
-  const a = el('a', null, p.gh ? 'View repository' : 'More on GitHub');
-  a.href = p.gh || CFG.github; a.target = '_blank'; a.rel = 'noopener';
-  parts.push(['CODE', [a]]);
-  cbody.replaceChildren(...parts.map((x, n) => section(x[0], x[1], n)));
-  dlg.showModal();
-  document.body.style.overflow = 'hidden';
-  dlg.scrollTop = 0;
-}
-document.addEventListener('click', e => {
-  const b = e.target.closest('[data-open]');
-  if (b) openCase(+b.dataset.open);
-});
-$('#cb').addEventListener('click', () => dlg.close());
-dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
-dlg.addEventListener('close', () => { document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); });
+  var overlay = document.getElementById('modalOverlay');
+  var modalTitle = document.getElementById('modalTitle');
+  var modalTags = document.getElementById('modalTags');
+  var modalBody = document.getElementById('modalBody');
+  var modalActions = document.getElementById('modalActions');
+  var modalClose = document.getElementById('modalClose');
+  var lastFocused = null;
 
-/* ---------- Horizontal scroll sections ---------- */
-const hs = $$('[data-hs]').map(s => ({ s, t: $('.hs-track', s), d: 0 }));
-function layoutHS() {
-  const nat = innerWidth < 800 || RM;
-  hs.forEach(o => {
-    o.s.classList.toggle('nat', nat);
-    if (nat) { o.s.style.height = ''; o.t.style.transform = ''; return; }
-    o.d = Math.max(0, o.t.scrollWidth - innerWidth);
-    o.s.style.height = (o.d + innerHeight) + 'px';
+  function sectionHTML(label, content){
+    if(!content) return '';
+    return '<div class="modal-section"><h4>' + label + '</h4><p>' + content + '</p></div>';
+  }
+  function listHTML(label, items){
+    if(!items || !items.length) return '';
+    return '<div class="modal-section"><h4>' + label + '</h4><ul>' + items.map(function(i){return '<li>'+i+'</li>';}).join('') + '</ul></div>';
+  }
+
+  function openModal(key){
+    var data = projectData[key];
+    if(!data) return;
+    lastFocused = document.activeElement;
+    modalTitle.textContent = data.title;
+    modalTags.innerHTML = data.tags.map(function(t){ return '<span>'+t+'</span>'; }).join('');
+    modalBody.innerHTML =
+      sectionHTML('Overview', data.overview) +
+      sectionHTML('Problem', data.problem) +
+      sectionHTML('Solution', data.solution) +
+      listHTML('Key features', data.features) +
+      sectionHTML('My contribution', data.contribution) +
+      sectionHTML('Results', data.results);
+    var actions = '';
+    if(data.github) actions += '<a href="'+data.github+'" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="bx bxl-github"></i> GitHub</a>';
+    if(data.demo) actions += '<a href="'+data.demo+'" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bx bx-play"></i> Live demo</a>';
+    modalActions.innerHTML = actions;
+    overlay.classList.add('is-open');
+    document.body.classList.add('modal-lock');
+    modalClose.focus();
+  }
+  function closeModal(){
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('modal-lock');
+    if(lastFocused) lastFocused.focus();
+  }
+  document.querySelectorAll('[data-modal-open]').forEach(function(btn){
+    btn.addEventListener('click', function(){ openModal(btn.getAttribute('data-modal-open')); });
   });
-  tickHS();
-}
-function tickHS() {
-  hs.forEach(o => {
-    if (o.s.classList.contains('nat')) return;
-    const r = o.s.getBoundingClientRect();
-    const p = clamp(-r.top / Math.max(1, o.s.offsetHeight - innerHeight), 0, 1);
-    o.t.style.transform = `translate3d(${-p * o.d}px,0,0)`;
+  modalClose.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && overlay.classList.contains('is-open')) closeModal();
+    if(e.key === 'Tab' && overlay.classList.contains('is-open')){
+      var focusables = overlay.querySelectorAll('button, a[href]');
+      if(!focusables.length) return;
+      var first = focusables[0], last = focusables[focusables.length - 1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
   });
-}
-let tick = false;
-addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(() => { tickHS(); tick = false; }); } }, { passive: true });
-let rt;
-addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { sizeNet(); layoutHS(); }, 120); });
-layoutHS();
-addEventListener('load', layoutHS);
-if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { sizeNet(); layoutHS(); });
-/* keep focused cards in view while horizontal sections are pinned */
-hs.forEach(o => o.t.addEventListener('focusin', e => {
-  if (o.s.classList.contains('nat')) return;
-  const c = e.target.closest('.hc'); if (!c) return;
-  const top = o.s.offsetTop + (c.offsetLeft / Math.max(1, o.d)) * (o.s.offsetHeight - innerHeight);
-  scrollTo({ top, behavior: 'auto' });
-}));
 
-/* ---------- Terminal ---------- */
-const out = $('#out'), tf = $('#tf'), ti = $('#ti'), tm = $('#tm');
-const print = (t, c) => { out.append(el('div', 'ln' + (c ? ' ' + c : ''), t)); tm.scrollTop = tm.scrollHeight; };
-const CMD = {
-  help: () => ['Commands: help, about, skills, projects, contact, whoami, focus, stack, status, clear'],
-  whoami: () => ['Banka Venkateswarlu'],
-  about: () => ['Software Developer and AI/ML Engineer.', 'B.Tech Computer Science Engineering, Vel Tech University, Chennai.', 'Building Generative AI and Agentic AI applications.'],
-  focus: () => ['Generative AI', 'Agentic AI', 'Software Development'],
-  stack: () => ['Python', 'Java', 'React', 'Node.js', 'LangGraph', 'AWS', 'Azure OpenAI'],
-  status: () => ['Building intelligent applications...'],
-  skills: () => G.map(g => g[0] + ': ' + g[2].map(i => i[1]).join(', ')),
-  projects: () => P.map((p, i) => (i + 1) + '. ' + p.t),
-  contact: () => ['GitHub: ' + CFG.github, 'LinkedIn: ' + CFG.linkedin].concat(CFG.email ? ['Email: ' + CFG.email] : [])
-};
-print('$ whoami', 'cm'); CMD.whoami().forEach(l => print(l));
-print('Type "help" to see commands.');
-tf.addEventListener('submit', e => {
-  e.preventDefault();
-  const c = ti.value.trim().toLowerCase();
-  ti.value = '';
-  if (!c) return;
-  if (c === 'clear') { out.replaceChildren(); return; }
-  print('$ ' + c, 'cm');
-  if (CMD[c]) CMD[c]().forEach(l => print(l));
-  else print('command not found: ' + c + '. Type "help".');
-});
-tm.addEventListener('click', () => { if (!getSelection().toString()) ti.focus({ preventScroll: true }); });
+  /* ---------- Contact form (frontend-only) ---------- */
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){
+      status.textContent = 'Please fill in every field with a valid email address.';
+      status.className = 'form-status is-visible';
+      return;
+    }
+    status.textContent = 'Message ready to send — connect a backend or email service to deliver it automatically. For now, feel free to email directly.';
+    status.className = 'form-status is-visible ok';
+    form.reset();
+  });
 
-/* ---------- Contact extras ---------- */
-const cl = $('#cl');
-const addLink = (label, href, ext) => {
-  const li = el('li'), a = el('a', null, label);
-  a.href = href;
-  if (ext) { a.target = '_blank'; a.rel = 'noopener'; }
-  li.append(a); cl.prepend(li);
-};
-if (CFG.resume) { const li = el('li'), a = el('a', null, 'Resume'); a.href = CFG.resume; a.target = '_blank'; a.rel = 'noopener'; li.append(a); cl.append(li); }
-if (CFG.phone) addLink('Phone', 'tel:' + CFG.phone.replace(/\s/g, ''), false);
-if (CFG.email) addLink('Email', 'mailto:' + CFG.email, false);
+  /* ---------- Footer year ---------- */
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+  /* ---------- Hero graph pulse (respects reduced motion) ---------- */
+  if(!reduceMotion){
+    var pulseGroup = document.getElementById('pulseGroup');
+    if(pulseGroup){
+      var circles = pulseGroup.querySelectorAll('circle');
+      circles.forEach(function(c, i){
+        c.style.animation = 'pulseNode 2.6s ease-in-out ' + (i * .25) + 's infinite';
+      });
+      var styleTag = document.createElement('style');
+      styleTag.textContent = '@keyframes pulseNode{0%,100%{opacity:.75;}50%{opacity:1;}}';
+      document.head.appendChild(styleTag);
+    }
+  }
 })();
 </script>
 </body>
